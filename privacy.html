@@ -95,6 +95,33 @@
       margin-bottom: 20px;
     }
 
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: #fff;
+      background: rgba(62, 101, 255, 0.15);
+      border-color: rgba(62, 101, 255, 0.4);
+    }
+
     .lang-switcher {
       display: inline-flex;
       flex-wrap: wrap;
@@ -246,6 +273,13 @@
         <div class="logo-badge">M</div>
         <div class="brand-name">Movidapp</div>
       </div>
+
+      <div class="nav-links">
+        <a href="privacy.html" class="active">Informativa Privacy</a>
+        <a href="support.html">Supporto & FAQ</a>
+        <a href="delete-account.html">Elimina Account</a>
+      </div>
+
       <h1 id="title">Informativa sulla Privacy</h1>
       <div class="subtitle" id="lastUpdated">Ultimo aggiornamento: 9 Ottobre 2026</div>
 
@@ -265,7 +299,9 @@
 
     <footer>
       &copy; 2026 Movidapp &bull; Rantime<br>
-      Tutti i diritti riservati &bull; All rights reserved.
+      Supporto: <a href="mailto:rantime.dev+movidapp@gmail.com">rantime.dev+movidapp@gmail.com</a> &bull;
+      <a href="support.html">Assistenza FAQ</a> &bull;
+      <a href="delete-account.html">Elimina Account</a>
     </footer>
   </div>
 

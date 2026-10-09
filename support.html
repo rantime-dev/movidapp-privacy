@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supporto & Assistenza - Movidapp</title>
+  <meta name="description" content="Centro di supporto ufficiale e FAQ di Movidapp per utenti iOS e Android. Contatta il team di sviluppo Rantime.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0b0d13;
+      --card-bg: rgba(26, 30, 43, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #3e65ff;
+      --primary-glow: rgba(62, 101, 255, 0.25);
+      --accent: #ff6e84;
+      --text-main: #f0f3fa;
+      --text-muted: #9aa3be;
+      --text-dim: #6c7693;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 32px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 16px 0;
+    }
+
+    .logo-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding: 10px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      box-shadow: 0 8px 24px var(--primary-glow);
+    }
+
+    .logo-badge {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ffffff, #a3b8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: #fff;
+      background: rgba(62, 101, 255, 0.15);
+      border-color: rgba(62, 101, 255, 0.4);
+    }
+
+    .lang-switcher {
+      display: inline-flex;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 10px var(--primary-glow);
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(62, 101, 255, 0.12), rgba(255, 110, 132, 0.08));
+      border: 1px solid rgba(62, 101, 255, 0.3);
+      text-align: center;
+      padding: 32px 24px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 18px;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: #d1d7e8;
+      font-size: 15px;
+    }
+
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--primary), #2546db);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 12px;
+      margin-top: 16px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 18px var(--primary-glow);
+      font-size: 15px;
+    }
+
+    .btn-contact:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(62, 101, 255, 0.4);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .email-display {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-family: monospace;
+      color: #93c5fd;
+      display: inline-block;
+      margin: 8px 0;
+      border: 1px solid var(--card-border);
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding: 24px 0;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    .lang-section {
+      display: none;
+    }
+
+    .lang-section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <div class="logo-badge">M</div>
+        <div class="brand-name">Movidapp</div>
+      </div>
+      
+      <div class="nav-links">
+        <a href="privacy.html">Informativa Privacy</a>
+        <a href="support.html" class="active">Supporto & FAQ</a>
+        <a href="delete-account.html">Elimina Account</a>
+      </div>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('it')">Italiano</button>
+        <button class="lang-btn" onclick="setLang('en')">English</button>
+      </div>
+
+      <h1 id="page-title">Supporto & Assistenza</h1>
+      <p class="subtitle" id="page-subtitle">Canale ufficiale di supporto utenti e risposte alle domande frequenti</p>
+    </header>
+
+    <!-- SEZIONE ITALIANO -->
+    <div id="content-it" class="lang-section active">
+      <div class="card contact-card">
+        <h2>💬 Hai bisogno di aiuto o vuoi inviarci un feedback?</h2>
+        <p>Il team di <strong>Rantime</strong> è a tua disposizione per supporto tecnico, segnalazione di bug, suggerimenti o richieste relative al tuo account.</p>
+        <div>
+          <span class="email-display">rantime.dev+movidapp@gmail.com</span>
+        </div>
+        <a href="mailto:rantime.dev+movidapp@gmail.com?subject=%5BMovidapp%5D%20Richiesta%20di%20Supporto" class="btn-contact">
+          ✉️ Scrivici una Email
+        </a>
+      </div>
+
+      <div class="card">
+        <h2>❓ Domande Frequenti (FAQ)</h2>
+
+        <div class="faq-item">
+          <h3>Come funziona la stima dell'affluenza in tempo reale?</h3>
+          <p>Movidapp è una piattaforma partecipativa. L'indice di affluenza visualizzato sulla mappa (Tranquillo, Medio, Pieno, Strapieno) è calcolato in tempo reale combinando le segnalazioni certificate degli utenti presenti fisicamente sul posto con modelli predittivi. Le segnalazioni recenti pesano maggiormente rispetto a quelle meno recenti.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Perché serve il GPS e cosa significa il raggio di 200 metri?</h3>
+          <p>Per inviare una segnalazione di affluenza su un locale, l'applicazione verifica che ti trovi entro un raggio di 200 metri dal locale stesso. Questa misura garantisce che solo chi è effettivamente presente possa aggiornare il livello della serata, proteggendo la community da informazioni false o datate. La tua posizione viene letta solo mentre usi l'app e mai registrata in background.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Cos'è il Trust Score sul mio profilo?</h3>
+          <p>Il Trust Score è il tuo punteggio di affidabilità. Più le tue segnalazioni sono veritiere e confermate da altri utenti, più il punteggio aumenta, dando maggior peso alle tue future segnalazioni. Comportamenti scorretti o segnalazioni fittizie abbassano il punteggio e possono limitare le funzionalità dell'account.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Come posso aggiungere un nuovo locale o segnalarne uno errato?</h3>
+          <p>Dalla mappa, tocca l'icona "+" per proporre un nuovo locale. Se un locale presenta informazioni non corrette, tocca la scheda del locale e seleziona "Segnala problema" per inviare una notifica ai moderatori.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Come posso eliminare il mio account e tutti i miei dati?</h3>
+          <p>Puoi farlo direttamente dall'app in <em>Profilo &rarr; Impostazioni &rarr; Elimina Account</em>. In alternativa, se non hai più l'app installata, visita la nostra pagina dedicata <a href="delete-account.html" style="color: var(--primary);">Eliminazione Account</a> per richiedere la cancellazione via web.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEZIONE ENGLISH -->
+    <div id="content-en" class="lang-section">
+      <div class="card contact-card">
+        <h2>💬 Need help or want to share feedback?</h2>
+        <p>The <strong>Rantime</strong> team is here to help with technical support, bug reports, feature suggestions, or account inquiries.</p>
+        <div>
+          <span class="email-display">rantime.dev+movidapp@gmail.com</span>
+        </div>
+        <a href="mailto:rantime.dev+movidapp@gmail.com?subject=%5BMovidapp%5D%20Support%20Request" class="btn-contact">
+          ✉️ Send us an Email
+        </a>
+      </div>
+
+      <div class="card">
+        <h2>❓ Frequently Asked Questions (FAQ)</h2>
+
+        <div class="faq-item">
+          <h3>How does real-time venue crowd estimation work?</h3>
+          <p>Movidapp is a collaborative crowd intelligence app. The vibe indicator on the map (Chill, Lively, Packed, Overcrowded) is calculated in real-time by combining verified check-ins and reports from people actually at the venue with predictive models. Fresh reports carry higher weight.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Why is GPS required and what is the 200-meter radius?</h3>
+          <p>To submit a crowd signal for a venue, Movidapp checks that you are physically within a 200m radius of the place. This ensures reports come only from people actually at the spot, keeping community data honest and reliable. Location is accessed solely while the app is actively on screen, never tracked in the background.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What is the Trust Score on my profile?</h3>
+          <p>The Trust Score represents your community reputation. Submitting truthful reports that align with fellow users increases your score, giving your future contributions greater influence. Inaccurate or spam reports decrease your score.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How can I add a new venue or report an error?</h3>
+          <p>Tap the "+" button on the map to suggest a new venue. If an existing venue has incorrect details or needs removal, tap into its details page and click "Report Issue" to alert our moderation team.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How can I permanently delete my account and data?</h3>
+          <p>You can delete your account instantly in the app under <em>Profile &rarr; Settings &rarr; Delete Account</em>. If you uninstalled the app, visit our <a href="delete-account.html" style="color: var(--primary);">Account Deletion</a> page to request removal via email.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2026 Movidapp &bull; Rantime<br>
+      Supporto: <a href="mailto:rantime.dev+movidapp@gmail.com" style="color: #9aa3be;">rantime.dev+movidapp@gmail.com</a>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.lang-section').forEach(sec => sec.classList.remove('active'));
+
+      if (lang === 'it') {
+        document.querySelector("button[onclick=\"setLang('it')\"]").classList.add('active');
+        document.getElementById('content-it').classList.add('active');
+        document.getElementById('page-title').innerText = "Supporto & Assistenza";
+        document.getElementById('page-subtitle').innerText = "Canale ufficiale di supporto utenti e risposte alle domande frequenti";
+      } else {
+        document.querySelector("button[onclick=\"setLang('en')\"]").classList.add('active');
+        document.getElementById('content-en').classList.add('active');
+        document.getElementById('page-title').innerText = "Help & Support";
+        document.getElementById('page-subtitle').innerText = "Official user assistance channel and frequently asked questions";
+      }
+    }
+  </script>
+</body>
+</html>

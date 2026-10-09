@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminazione Account & Dati - Movidapp</title>
+  <meta name="description" content="Richiesta di cancellazione account e dati personali per Movidapp conforme ai requisiti Google Play Store e Apple App Store.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0b0d13;
+      --card-bg: rgba(26, 30, 43, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #3e65ff;
+      --primary-glow: rgba(62, 101, 255, 0.25);
+      --accent: #ff6e84;
+      --danger: #ef4444;
+      --danger-glow: rgba(239, 68, 68, 0.2);
+      --text-main: #f0f3fa;
+      --text-muted: #9aa3be;
+      --text-dim: #6c7693;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 32px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 16px 0;
+    }
+
+    .logo-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding: 10px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      box-shadow: 0 8px 24px var(--primary-glow);
+    }
+
+    .logo-badge {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ffffff, #a3b8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: #fff;
+      background: rgba(62, 101, 255, 0.15);
+      border-color: rgba(62, 101, 255, 0.4);
+    }
+
+    .lang-switcher {
+      display: inline-flex;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 10px var(--primary-glow);
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-danger {
+      border-color: rgba(239, 68, 68, 0.3);
+      background: rgba(30, 18, 22, 0.6);
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: #d1d7e8;
+      font-size: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: #d1d7e8;
+      font-size: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 26px;
+      border-radius: 12px;
+      margin-top: 10px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 18px var(--danger-glow);
+      font-size: 15px;
+    }
+
+    .btn-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(239, 68, 68, 0.4);
+    }
+
+    .info-box {
+      background: rgba(62, 101, 255, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #c4d3fc;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding: 24px 0;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    .lang-section {
+      display: none;
+    }
+
+    .lang-section.active {
+      display: block;
+    }
+
+    .code-box {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-family: monospace;
+      color: #93c5fd;
+      display: inline-block;
+      margin: 6px 0 14px 0;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <div class="logo-badge">M</div>
+        <div class="brand-name">Movidapp</div>
+      </div>
+      
+      <div class="nav-links">
+        <a href="privacy.html">Informativa Privacy</a>
+        <a href="support.html">Supporto & FAQ</a>
+        <a href="delete-account.html" class="active">Elimina Account</a>
+      </div>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('it')">Italiano</button>
+        <button class="lang-btn" onclick="setLang('en')">English</button>
+      </div>
+
+      <h1 id="page-title">Cancellazione Account & Dati</h1>
+      <p class="subtitle" id="page-subtitle">Richiesta di rimozione permanente dell'account (Google Play & Apple Compliance)</p>
+    </header>
+
+    <!-- SEZIONE ITALIANO -->
+    <div id="content-it" class="lang-section active">
+      <div class="card card-danger">
+        <h2>⚠️ Diritto all'Oblio e Cancellazione</h2>
+        <p>In piena conformità con il <strong>Regolamento Generale sulla Protezione dei Dati (GDPR - UE 2016/679)</strong> e con le direttive di <strong>Google Play Store</strong> e <strong>Apple App Store</strong>, puoi richiedere in qualsiasi momento la cancellazione totale e permanente del tuo account Movidapp e di tutti i dati personali associati.</p>
+        <p>Se hai già disinstallato l'applicazione dal tuo dispositivo, non è necessario reinstallarla: puoi inviare la richiesta direttamente da questa pagina web.</p>
+      </div>
+
+      <div class="card">
+        <h2>📱 Metodo 1: Cancellazione Diretta In-App (Immediata)</h2>
+        <p>Se hai ancora l'app installata sullo smartphone:</p>
+        <ul>
+          <li>Apri <strong>Movidapp</strong> ed effettua l'accesso.</li>
+          <li>Tocca l'icona del profilo in basso a destra.</li>
+          <li>Vai su <strong>Impostazioni</strong> (icona ingranaggio) e tocca <strong>"Elimina Account"</strong>.</li>
+          <li>Conferma l'operazione: il tuo account e i relativi dati verranno cancellati istantaneamente dal database.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>✉️ Metodo 2: Richiesta Web / Email (App disinstallata)</h2>
+        <p>Se non hai più accesso all'applicazione, inviaci un'email specificando l'indirizzo con cui hai effettuato la registrazione (tramite Google Sign-In o Apple ID):</p>
+        
+        <div class="info-box">
+          <strong>Email del Titolare:</strong> <span class="code-box">rantime.dev+movidapp@gmail.com</span><br>
+          <strong>Oggetto consigliato:</strong> <code>[Movidapp] Richiesta cancellazione account</code>
+        </div>
+
+        <p>Puoi cliccare direttamente sul pulsante in basso per aprire il tuo client di posta preconfigurato:</p>
+        <a href="mailto:rantime.dev+movidapp@gmail.com?subject=%5BMovidapp%5D%20Richiesta%20Cancellazione%20Account%20e%20Dati&body=Gentile%20Supporto%20Movidapp%20(Rantime)%2C%0A%0ARichiedo%20la%20cancellazione%20permanente%20del%20mio%20account%20Movidapp%20e%20di%20tutti%20i%20dati%20personali%20associati.%0A%0AIndirizzo%20email%20registrato%3A%20%5BINSERISCI%20QUI%20LA%20TUA%20EMAIL%5D%0ANome%20Utente%20o%20ID%20(se%20noto)%3A%20%0A%0AGrazie." class="btn-action">
+          ✉️ Invia Richiesta di Cancellazione
+        </a>
+      </div>
+
+      <div class="card">
+        <h2>🔒 Quali dati vengono cancellati e tempi di conservazione</h2>
+        <ul>
+          <li><strong>Dati Utente Eliminati:</strong> Indirizzo email, nome e cognome registrati, identificativi univoci di autenticazione (Supabase Auth ID / Apple / Google UID), token di notifica push (FCM) e preferenze personali.</li>
+          <li><strong>Contenuti e Segnalazioni:</strong> I luoghi preferiti salvati vengono eliminati definitivamente. Eventuali stime di affluenza inviate in passato rimangono in forma totalmente anonima e aggregata, disconnesse da qualsiasi riferimento al tuo profilo.</li>
+          <li><strong>Tempi di evasione:</strong> Le richieste inviate via email vengono elaborate e completate entro un massimo di <strong>48 ore lavorative</strong>. Riceverai una conferma scritta all'indirizzo email mittente.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SEZIONE ENGLISH -->
+    <div id="content-en" class="lang-section">
+      <div class="card card-danger">
+        <h2>⚠️ Right to Erasure & Account Deletion</h2>
+        <p>In full compliance with the <strong>EU General Data Protection Regulation (GDPR 2016/679)</strong> and <strong>Google Play & Apple App Store Guidelines</strong>, you have the right to request the permanent deletion of your Movidapp account and all associated personal data at any time.</p>
+        <p>If you have uninstalled the app from your mobile device, you do not need to reinstall it. You can submit your deletion request directly from this web page.</p>
+      </div>
+
+      <div class="card">
+        <h2>📱 Option 1: Direct In-App Deletion (Immediate)</h2>
+        <p>If you still have Movidapp installed on your phone:</p>
+        <ul>
+          <li>Open <strong>Movidapp</strong> and log in.</li>
+          <li>Go to your Profile tab in the bottom navigation.</li>
+          <li>Tap <strong>Settings</strong> (gear icon) and select <strong>"Delete Account"</strong>.</li>
+          <li>Confirm: your account and personal records are permanently erased immediately from our database.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>✉️ Option 2: Web / Email Request (Uninstalled App)</h2>
+        <p>If you no longer have access to the app, send an email indicating the email address used when registering (via Google Sign-In or Apple ID):</p>
+        
+        <div class="info-box">
+          <strong>Data Controller Email:</strong> <span class="code-box">rantime.dev+movidapp@gmail.com</span><br>
+          <strong>Suggested Subject:</strong> <code>[Movidapp] Account Deletion Request</code>
+        </div>
+
+        <p>Click the button below to open your default email app with a pre-filled request:</p>
+        <a href="mailto:rantime.dev+movidapp@gmail.com?subject=%5BMovidapp%5D%20Account%20and%20Data%20Deletion%20Request&body=Dear%20Movidapp%20Support%20(Rantime)%2C%0A%0APlease%20permanently%20delete%20my%20Movidapp%20account%20and%20all%20associated%20personal%20data.%0A%0ARegistered%20Email%20Address%3A%20%5BINSERT%20YOUR%20EMAIL%20HERE%5D%0A%0AThank%20you." class="btn-action">
+          ✉️ Send Deletion Request
+        </a>
+      </div>
+
+      <div class="card">
+        <h2>🔒 Data Retention & What Gets Deleted</h2>
+        <ul>
+          <li><strong>Deleted Account Data:</strong> Email address, registered full name, authentication user IDs (Supabase Auth / Google / Apple UID), FCM push notification tokens, and personal settings.</li>
+          <li><strong>User Contributions:</strong> Saved favorite venues are permanently wiped. Historical crowd signals remain purely aggregated and anonymized, completely dissociated from your personal identity.</li>
+          <li><strong>Processing Time:</strong> Requests submitted by email are processed and finalized within <strong>48 business hours</strong>. You will receive written confirmation once completed.</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2026 Movidapp &bull; Rantime<br>
+      Supporto: <a href="mailto:rantime.dev+movidapp@gmail.com" style="color: #9aa3be;">rantime.dev+movidapp@gmail.com</a>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.lang-section').forEach(sec => sec.classList.remove('active'));
+
+      if (lang === 'it') {
+        document.querySelector("button[onclick=\"setLang('it')\"]").classList.add('active');
+        document.getElementById('content-it').classList.add('active');
+        document.getElementById('page-title').innerText = "Cancellazione Account & Dati";
+        document.getElementById('page-subtitle').innerText = "Richiesta di rimozione permanente dell'account (Google Play & Apple Compliance)";
+      } else {
+        document.querySelector("button[onclick=\"setLang('en')\"]").classList.add('active');
+        document.getElementById('content-en').classList.add('active');
+        document.getElementById('page-title').innerText = "Account & Data Deletion";
+        document.getElementById('page-subtitle').innerText = "Permanent account removal request (Google Play & Apple Compliance)";
+      }
+    }
+  </script>
+</body>
+</html>
