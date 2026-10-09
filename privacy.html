@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informativa sulla Privacy - Movidapp</title>
+  <meta name="description" content="Informativa sulla Privacy e Trattamento dei Dati Personali di Movidapp per Apple App Store e Google Play Store.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0b0d13;
+      --card-bg: rgba(26, 30, 43, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #3e65ff;
+      --primary-glow: rgba(62, 101, 255, 0.25);
+      --accent: #ff6e84;
+      --text-main: #f0f3fa;
+      --text-muted: #9aa3be;
+      --text-dim: #6c7693;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 32px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 16px 0;
+    }
+
+    .logo-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding: 10px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      box-shadow: 0 8px 24px var(--primary-glow);
+    }
+
+    .logo-badge {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      background: linear-gradient(135deg, #ffffff, #a3b8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .lang-switcher {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 6px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 12px var(--primary-glow);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+      padding-left: 4px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+      color: var(--text-muted);
+      font-size: 14.5px;
+    }
+
+    li strong {
+      color: var(--text-main);
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 8px;
+      color: var(--primary);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .highlight-box {
+      background: rgba(62, 101, 255, 0.08);
+      border: 1px solid rgba(62, 101, 255, 0.25);
+      border-radius: 12px;
+      padding: 18px;
+      margin: 22px 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      color: #d1dcff;
+      font-size: 14px;
+    }
+
+    .contact-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      color: #ffffff;
+      font-family: monospace;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 0 16px;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <div class="logo-badge">M</div>
+        <div class="brand-name">Movidapp</div>
+      </div>
+      <h1 id="title">Informativa sulla Privacy</h1>
+      <div class="subtitle" id="lastUpdated">Ultimo aggiornamento: 9 Ottobre 2026</div>
+
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="it" onclick="setLang('it')">🇮🇹 Italiano</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')">🇪🇸 Español</button>
+        <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
+        <button class="lang-btn" data-lang="de" onclick="setLang('de')">🇩🇪 Deutsch</button>
+        <button class="lang-btn" data-lang="pt" onclick="setLang('pt')">🇵🇹 Português</button>
+      </div>
+    </header>
+
+    <main class="card" id="content">
+      <!-- Popolato dinamicamente in base alla lingua -->
+    </main>
+
+    <footer>
+      &copy; 2026 Movidapp &bull; Rantime Dev<br>
+      Tutti i diritti riservati &bull; All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    const translations = {
+      it: {
+        title: "Informativa sulla Privacy",
+        lastUpdated: "Ultimo aggiornamento: 9 Ottobre 2026",
+        content: `
+          <h2>1. Titolare del Trattamento</h2>
+          <p>
+            Il Titolare del trattamento dei dati personali è <strong>Rantime Dev</strong>, ideatore e gestore di <strong>Movidapp</strong>.<br>
+            Per qualsiasi richiesta o esercizio dei diritti previsti dal Regolamento UE 2016/679 (GDPR), è possibile contattare l'indirizzo:<br>
+            <span class="contact-badge">rantime.dev+movidapp@gmail.com</span>
+          </p>
+
+          <h2>2. Tipologia di Dati Raccolti</h2>
+          <p>Movidapp adotta un approccio rigoroso di minimizzazione dei dati (Privacy by Design). Raccogliamo unicamente i dati necessari per erogare il servizio:</p>
+          <ul>
+            <li><strong>Dati dell'Account:</strong> Nome, cognome e indirizzo email forniti volontariamente tramite l'autenticazione sicura <strong>Google Sign-In</strong> o <strong>Sign in with Apple</strong>. Movidapp non gestisce né memorizza alcuna password.</li>
+            <li><strong>Dati di Posizione (GPS in Foreground):</strong> Previo esplicito consenso, rileviamo la posizione geografica del dispositivo <em>esclusivamente</em> mentre l'applicazione è aperta ed in uso. Serve per mostrare i locali vicini e convalidare la prossimità (raggio 200m) per l'invio delle segnalazioni. <strong>Movidapp non registra né traccia gli spostamenti in background o a schermo spento.</strong></li>
+            <li><strong>Token di Notifica (Firebase Cloud Messaging):</strong> Un codice identificativo del dispositivo per recapitarti notifiche push in tempo reale sui tuoi locali preferiti.</li>
+            <li><strong>Contenuti Generati dall'Utente:</strong> Segnalazioni di affluenza, nuovi locali suggeriti o report inviati alla community.</li>
+            <li><strong>Preferenze Locali:</strong> Preferenze di visualizzazione (tema, lingua, unità di misura) salvate unicamente in memoria locale sul tuo dispositivo.</li>
+          </ul>
+
+          <h2>3. Finalità e Base Giuridica del Trattamento</h2>
+          <ul>
+            <li><strong>Erogazione del Servizio (Art. 6.1.b GDPR):</strong> Creazione del profilo, visualizzazione della mappa in tempo reale, gestione dei preferiti.</li>
+            <li><strong>Consenso dell'Interessato (Art. 6.1.a GDPR):</strong> Accesso alla geolocalizzazione GPS in tempo reale ed invio delle notifiche push.</li>
+            <li><strong>Legittimo Interesse & Sicurezza (Art. 6.1.f GDPR):</strong> Prevenzione dello spam, accuratezza del punteggio affidabilità (Trust Score) e moderazione dei contenuti.</li>
+          </ul>
+
+          <h2>4. Fornitori Terzi e Trasferimento Dati</h2>
+          <p>Movidapp si avvale di partner tecnici certificati e conformi al GDPR:</p>
+          <ul>
+            <li><strong>Supabase Inc.:</strong> Gestione database, autenticazione e logica cloud con data center ospitati nell'Unione Europea.</li>
+            <li><strong>Google Firebase (Google Ireland Ltd.):</strong> Servizio di recapito notifiche push (FCM) e infrastruttura server.</li>
+            <li><strong>CARTO & OpenStreetMap:</strong> Erogazione delle tessere cartografiche della mappa. Nessun dato personale identificabile viene condiviso con i fornitori delle mappe.</li>
+          </ul>
+
+          <h2>5. Conservazione dei Dati ed Eliminazione Account</h2>
+          <p>I dati personali sono conservati per il tempo strettamente necessario a garantire il servizio e finché l'account risulta attivo.</p>
+          <div class="highlight-box">
+            <p><strong>Come richiedere la cancellazione dell'account e di tutti i dati:</strong><br>
+            1. <strong>Dall'App:</strong> Vai in <em>Impostazioni</em> &rarr; tocca <em>"Elimina account"</em> e conferma.<br>
+            2. <strong>Dal Web / Senza App:</strong> Invia una email all'indirizzo <a href="mailto:rantime.dev+movidapp@gmail.com?subject=Richiesta%20Cancellazione%20Account%20Movidapp" style="color: #fff; font-weight: 600;">rantime.dev+movidapp@gmail.com</a> con oggetto <em>"Richiesta Cancellazione Account"</em> indicando l'email del tuo profilo. Tutti i dati associati verranno rimossi permanentemente entro 48 ore lavorative.</p>
+          </div>
+
+          <h2>6. Diritti dell'Interessato (GDPR)</h2>
+          <p>In conformità agli articoli 15-22 del GDPR, hai il diritto di accedere ai tuoi dati, chiederne la rettifica, la cancellazione, la limitazione del trattamento, la portabilità, nonché proporre reclamo all'Autorità Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" style="color: var(--primary);">www.garanteprivacy.it</a>).</p>
+
+          <h2>7. Contatti</h2>
+          <p>Per chiarimenti o domande sulla presente informativa, puoi contattarci a:<br>
+          <span class="contact-badge">rantime.dev+movidapp@gmail.com</span></p>
+        `
+      },
+      en: {
+        title: "Privacy Policy",
+        lastUpdated: "Last updated: October 9, 2026",
+        content: `
+          <h2>1. Data Controller</h2>
+          <p>
+            The Data Controller is <strong>Rantime Dev</strong>, creator and operator of <strong>Movidapp</strong>.<br>
+            For any inquiries or to exercise your rights under EU Regulation 2016/679 (GDPR), please contact us at:<br>
+            <span class="contact-badge">rantime.dev+movidapp@gmail.com</span>
+          </p>
+
+          <h2>2. Categories of Data Collected</h2>
+          <p>Movidapp adheres strictly to privacy-by-design and data minimization principles. We only collect data necessary for core features:</p>
+          <ul>
+            <li><strong>Account & Authentication:</strong> Full name and email address provided through secure <strong>Google Sign-In</strong> or <strong>Sign in with Apple</strong>. Movidapp never handles or stores passwords.</li>
+            <li><strong>Location Data (Foreground GPS):</strong> Subject to explicit permission, we access your device's geographical location <em>only</em> while the app is active in the foreground. Used to display nearby venues and verify a 200m interaction radius for crowd reports. <strong>Movidapp never tracks or records location in the background.</strong></li>
+            <li><strong>Push Notification Tokens (FCM):</strong> A unique device token to deliver real-time notifications about your favorite venues.</li>
+            <li><strong>User-Generated Content:</strong> Crowd signals, suggested venues, or reports submitted to the community.</li>
+            <li><strong>Local Device Preferences:</strong> UI preferences (theme, language, unit system) stored strictly on your local device.</li>
+          </ul>
+
+          <h2>3. Purposes & Legal Bases of Processing</h2>
+          <ul>
+            <li><strong>Service Delivery (Art. 6.1.b GDPR):</strong> Profile management, live map visualization, favorite venue monitoring.</li>
+            <li><strong>User Consent (Art. 6.1.a GDPR):</strong> Real-time GPS location access and push notification delivery.</li>
+            <li><strong>Legitimate Interest (Art. 6.1.f GDPR):</strong> Spam prevention, community reliability scoring (Trust Score), and content moderation.</li>
+          </ul>
+
+          <h2>4. Third-Party Services & Data Transfers</h2>
+          <p>Movidapp uses trusted partners compliant with GDPR standards:</p>
+          <ul>
+            <li><strong>Supabase Inc.:</strong> Database hosting, user authentication, and secure cloud functions (hosted within the European Union).</li>
+            <li><strong>Google Firebase (Google Ireland Ltd.):</strong> Push notification infrastructure (FCM).</li>
+            <li><strong>CARTO & OpenStreetMap:</strong> Map tiles delivery. No personal identifiable information is shared with map providers.</li>
+          </ul>
+
+          <h2>5. Data Retention & Account Deletion (Right to Erasure)</h2>
+          <p>Personal data is retained only for as long as needed to provide the service or until you delete your account.</p>
+          <div class="highlight-box">
+            <p><strong>How to delete your account and associated data:</strong><br>
+            1. <strong>In-App:</strong> Go to <em>Settings</em> &rarr; tap <em>"Delete Account"</em> and confirm.<br>
+            2. <strong>Web / Without the App:</strong> Send an email to <a href="mailto:rantime.dev+movidapp@gmail.com?subject=Movidapp%20Account%20Deletion%20Request" style="color: #fff; font-weight: 600;">rantime.dev+movidapp@gmail.com</a> with subject <em>"Movidapp Account Deletion Request"</em> from your registered email address. Your data will be permanently wiped within 48 business hours.</p>
+          </div>
+
+          <h2>6. Your Rights under GDPR</h2>
+          <p>Under Articles 15-22 of the GDPR, you have the right to access, rectify, port, or erase your data, withdraw consent at any time, or lodge a complaint with your local data protection authority.</p>
+
+          <h2>7. Contact Us</h2>
+          <p>If you have any questions or feedback regarding this Privacy Policy, please contact:<br>
+          <span class="contact-badge">rantime.dev+movidapp@gmail.com</span></p>
+        `
+      },
+      es: {
+        title: "Política de Privacidad",
+        lastUpdated: "Última actualización: 9 de octubre de 2026",
+        content: `
+          <h2>1. Responsable del Tratamiento</h2>
+          <p>
+            El Responsable del tratamiento de datos personales es <strong>Rantime Dev</strong>, creador y administrador de <strong>Movidapp</strong>.<br>
+            Para cualquier consulta o ejercicio de derechos según el RGPD (UE 2016/679), contáctenos en:<br>
+            <span class="contact-badge">rantime.dev+movidapp@gmail.com</span>
+          </p>
+
+          <h2>2. Datos Personales Recopilados</h2>
+          <p>Movidapp aplica el principio de minimización de datos (Privacy by Design). Solo recopilamos los datos imprescindibles para el servicio:</p>
+          <ul>
+            <li><strong>Datos de Cuenta y Autenticación:</strong> Nombre y correo electrónico facilitados voluntariamente mediante <strong>Google Sign-In</strong> o <strong>Sign in with Apple</strong>. Movidapp no almacena ni procesa contraseñas.</li>
+            <li><strong>Datos de Ubicación (GPS en Primer Plano):</strong> Con su consentimiento explícito, accedemos a su ubicación geográfica <em>únicamente</em> mientras la aplicación está en uso activo. Se utiliza para mostrar locales cercanos y verificar la proximidad (200m) para enviar reportes. <strong>Movidapp nunca registra su ubicación en segundo plano o con la pantalla apagada.</strong></li>
+            <li><strong>Token de Notificaciones (Firebase Cloud Messaging):</strong> Identificador del dispositivo para el envío de notificaciones push de sus locales favoritos.</li>
+            <li><strong>Contenido Generado por el Usuario:</strong> Reportes de afluencia, nuevos locales propuestos o avisos comunitarios.</li>
+            <li><strong>Preferencias Locales:</strong> Preferencias de interfaz (tema, idioma, unidades) guardadas estrictamente en la memoria de su dispositivo.</li>
+          </ul>
+
+          <h2>3. Fines y Bases Jurídicas del Tratamiento</h2>
+          <ul>
+            <li><strong>Ejecución del Servicio (Art. 6.1.b RGPD):</strong> Gestión del perfil, visualización del mapa en tiempo real, gestión de locales favoritos.</li>
+            <li><strong>Consentimiento del Usuario (Art. 6.1.a RGPD):</strong> Acceso a la geolocalización GPS y recepción de notificaciones push.</li>
+            <li><strong>Interés Legítimo y Seguridad (Art. 6.1.f RGPD):</strong> Prevención de spam, fiabilidad de la puntuación de confianza (Trust Score) y moderación de contenidos.</li>
+          </ul>
+
+          <h2>4. Proveedores Terceros y Transferencias</h2>
+          <p>Trabajamos con proveedores tecnológicos certificados que cumplen con el RGPD:</p>
+          <ul>
+            <li><strong>Supabase Inc.:</strong> Base de datos, autenticación y funciones en la nube (alojadas en la Unión Europea).</li>
+            <li><strong>Google Firebase (Google Ireland Ltd.):</strong> Infraestructura de envío de notificaciones push (FCM).</li>
+            <li><strong>CARTO & OpenStreetMap:</strong> Entrega de capas cartográficas. No se comparte ningún dato identificable con los proveedores de mapas.</li>
+          </ul>
+
+          <h2>5. Conservación y Eliminación de la Cuenta (Derecho al Olvido)</h2>
+          <p>Los datos se conservan únicamente mientras la cuenta permanezca activa.</p>
+          <div class="highlight-box">
+            <p><strong>Cómo solicitar la eliminación de su cuenta y datos asociados:</strong><br>
+            1. <strong>Desde la Aplicación:</strong> Vaya a <em>Ajustes</em> &rarr; toque <em>"Eliminar cuenta"</em> y confirme.<br>
+            2. <strong>Desde la Web / Sin la App:</strong> Envíe un correo a <a href="mailto:rantime.dev+movidapp@gmail.com?subject=Solicitud%20Eliminacion%20Cuenta%20Movidapp" style="color: #fff; font-weight: 600;">rantime.dev+movidapp@gmail.com</a> con el asunto <em>"Solicitud Eliminación Cuenta"</em> indicando el correo de su cuenta. Sus datos serán eliminados permanentemente en un plazo máximo de 48 horas laborables.</p>
+          </div>
+
+          <h2>6. Derechos del Usuario (RGPD)</h2>
+          <p>Tiene derecho a acceder a sus datos personales, solicitar su rectificación o supresión, limitar u oponerse a su tratamiento y presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) o la autoridad europea correspondiente.</p>
+
+          <h2>7. Contacto</h2>
+          <p>Para cualquier consulta sobre esta política, escríbanos a:<br>
+          <span class="contact-badge">rantime.dev+movidapp@gmail.com</span></p>
+        `
+      },
+      fr: {
+        title: "Politique de Confidentialité",
+        lastUpdated: "Dernière mise à jour : 9 octobre 2026",
+        content: `
+          <h2>1. Responsable du Traitement</h2>
+          <p>
+            Le Responsable du traitement des données personnelles est <strong>Rantime Dev</strong>, créateur et exploitant de <strong>Movidapp</strong>.<br>
+            Pour toute demande relative au RGPD (UE 2016/679), veuillez nous contacter à l'adresse :<br>
+            <span class="contact-badge">rantime.dev+movidapp@gmail.com</span>
+          </p>
+
+          <h2>2. Données Personnelles Collectées</h2>
+          <p>Movidapp respecte scrupuleusement le principe de minimisation des données :</p>
+          <ul>
+            <li><strong>Données de Compte :</strong> Nom et adresse e-mail fournis volontairement via <strong>Google Sign-In</strong> ou <strong>Sign in with Apple</strong>. Movidapp ne traite ni ne stocke aucun mot de passe.</li>
+            <li><strong>Données de Localisation (GPS en Premier Plan) :</strong> Avec votre consentement explicite, nous accédons à votre position géographique <em>uniquement</em> pendant que l'application est active à l'écran. Cela sert à afficher les établissements à proximité et à vérifier la proximité (200m) lors de l'envoi de signalements. <strong>Movidapp ne suit jamais votre position en arrière-plan.</strong></li>
+            <li><strong>Jeton de Notification (Firebase Cloud Messaging) :</strong> Identifiant de l'appareil permettant l'envoi de notifications push sur vos lieux favoris.</li>
+            <li><strong>Contenus Créés par l'Utilisateur :</strong> Signalements d'affluence en temps réel, nouveaux lieux suggérés ou rapports communautaires.</li>
+            <li><strong>Préférences Locales :</strong> Préférences d'affichage (thème, langue, unités) enregistrées uniquement en local sur votre appareil.</li>
+          </ul>
+
+          <h2>3. Finalités et Bases Juridiques</h2>
+          <ul>
+            <li><strong>Exécution du Service (Art. 6.1.b RGPD) :</strong> Gestion du compte, affichage de la carte en temps réel, suivi des favoris.</li>
+            <li><strong>Consentement de l'Utilisateur (Art. 6.1.a RGPD) :</strong> Accès à la géolocalisation GPS et réception des notifications push.</li>
+            <li><strong>Intérêt Légitime (Art. 6.1.f RGPD) :</strong> Prévention du spam, fiabilité du score de confiance (Trust Score) et modération du contenu.</li>
+          </ul>
+
+          <h2>4. Prestataires Tiers</h2>
+          <p>Movidapp fait appel à des partenaires technologiques conformes au RGPD :</p>
+          <ul>
+            <li><strong>Supabase Inc. :</strong> Hébergement des bases de données et authentification au sein de l'Union Européenne.</li>
+            <li><strong>Google Firebase (Google Ireland Ltd.) :</strong> Service de distribution des notifications push (FCM).</li>
+            <li><strong>CARTO & OpenStreetMap :</strong> Fourniture des fonds de carte. Aucune donnée personnelle identifiable n'est transmise aux cartographes.</li>
+          </ul>
+
+          <h2>5. Conservation et Suppression du Compte (Droit à l'Oubli)</h2>
+          <p>Les données sont conservées uniquement pendant la durée d'activité du compte.</p>
+          <div class="highlight-box">
+            <p><strong>Comment supprimer votre compte et toutes les données associées :</strong><br>
+            1. <strong>Depuis l'Application :</strong> Rendez-vous dans <em>Paramètres</em> &rarr; appuyez sur <em>"Supprimer le compte"</em> et confirmez.<br>
+            2. <strong>Depuis le Web / Sans l'Application :</strong> Envoyez un e-mail à <a href="mailto:rantime.dev+movidapp@gmail.com?subject=Demande%20de%20Suppression%20de%20Compte%20Movidapp" style="color: #fff; font-weight: 600;">rantime.dev+movidapp@gmail.com</a> avec pour objet <em>"Demande de Suppression de Compte"</em> en mentionnant votre adresse e-mail. Vos données seront définitivement effacées sous 48 heures ouvrées.</p>
+          </div>
+
+          <h2>6. Vos Droits (RGPD)</h2>
+          <p>Conformément aux articles 15 à 22 du RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et de portabilité de vos données, ainsi que du droit d'introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" style="color: var(--primary);">www.cnil.fr</a>).</p>
+
+          <h2>7. Contact</h2>
+          <p>Pour toute question, contactez-nous à l'adresse :<br>
+          <span class="contact-badge">rantime.dev+movidapp@gmail.com</span></p>
+        `
+      },
+      de: {
+        title: "Datenschutzerklärung",
+        lastUpdated: "Zuletzt aktualisiert: 9. Oktober 2026",
+        content: `
+          <h2>1. Verantwortlicher</h2>
+          <p>
+            Verantwortlicher im Sinne der DSGVO (EU 2016/679) ist <strong>Rantime Dev</strong>, Entwickler und Betreiber von <strong>Movidapp</strong>.<br>
+            Für datenschutzrechtliche Anfragen kontaktieren Sie uns bitte unter:<br>
+            <span class="contact-badge">rantime.dev+movidapp@gmail.com</span>
+          </p>
+
+          <h2>2. Arten der erhobenen Daten</h2>
+          <p>Movidapp folgt streng dem Prinzip der Datensparsamkeit (Privacy by Design). Wir erfassen nur absolut notwendige Daten:</p>
+          <ul>
+            <li><strong>Kontodaten:</strong> Name und E-Mail-Adresse, freiwillig bereitgestellt über <strong>Google Sign-In</strong> oder <strong>Sign in with Apple</strong>. Movidapp speichert oder verarbeitet niemals Passwörter.</li>
+            <li><strong>Standortdaten (GPS im Vordergrund):</strong> Nur mit Ihrer ausdrücklichen Einwilligung erfassen wir Ihren Standort <em>ausschließlich</em> während die App geöffnet und aktiv ist. Dies dient dazu, nahegelegene Orte anzuzeigen und die 200m-Nähe für Meldungen zu prüfen. <strong>Movidapp verfolgt oder speichert niemals Standorte im Hintergrund.</strong></li>
+            <li><strong>Push-Benachrichtigungs-Tokens (FCM):</strong> Eindeutiger Geräte-Token, um Echtzeit-Meldungen zu Ihren Favoriten zuzustellen.</li>
+            <li><strong>Nutzergenerierte Inhalte:</strong> Auslastungsmeldungen, neu vorgeschlagene Orte oder Feedback an die Community.</li>
+            <li><strong>Lokale Einstellungen:</strong> Benutzeroberflächen-Präferenzen (Design, Sprache, Einheiten), die ausschließlich lokal auf Ihrem Gerät gespeichert sind.</li>
+          </ul>
+
+          <h2>3. Zwecke und Rechtsgrundlagen der Verarbeitung</h2>
+          <ul>
+            <li><strong>Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO):</strong> Bereitstellung der App-Funktionen, Live-Karte, Favoritenverwaltung.</li>
+            <li><strong>Einwilligung (Art. 6 Abs. 1 lit. a DSGVO):</strong> GPS-Standorterfassung und Versand von Push-Benachrichtigungen.</li>
+            <li><strong>Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO):</strong> Spam-Prävention, Genauigkeit des Trust-Score-Systems und Inhaltsmoderation.</li>
+          </ul>
+
+          <h2>4. Drittanbieter und Datenübermittlung</h2>
+          <p>Movidapp nutzt DSGVO-konforme technische Dienstleister:</p>
+          <ul>
+            <li><strong>Supabase Inc.:</strong> Datenbank- und Authentifizierungsinfrastruktur in Rechenzentren innerhalb der Europäischen Union.</li>
+            <li><strong>Google Firebase (Google Ireland Ltd.):</strong> Versanddienst für Push-Benachrichtigungen (FCM).</li>
+            <li><strong>CARTO & OpenStreetMap:</strong> Kartendienst. Es werden keine personenbezogenen Daten an die Kartenanbieter weitergegeben.</li>
+          </ul>
+
+          <h2>5. Speicherdauer und Kontolöschung (Recht auf Vergessenwerden)</h2>
+          <p>Personenbezogene Daten werden nur so lange gespeichert, wie Ihr Konto aktiv ist.</p>
+          <div class="highlight-box">
+            <p><strong>So löschen Sie Ihr Konto und alle zugehörigen Daten:</strong><br>
+            1. <strong>In der App:</strong> Gehen Sie zu <em>Einstellungen</em> &rarr; tippen Sie auf <em>"Konto löschen"</em> und bestätigen Sie.<br>
+            2. <strong>Über das Web / Ohne App:</strong> Senden Sie eine E-Mail an <a href="mailto:rantime.dev+movidapp@gmail.com?subject=Antrag%20auf%20Kontoloeschung%20Movidapp" style="color: #fff; font-weight: 600;">rantime.dev+movidapp@gmail.com</a> mit dem Betreff <em>"Antrag auf Kontolöschung"</em> von Ihrer registrierten E-Mail-Adresse. Ihre Daten werden innerhalb von 48 Arbeitsstunden unwiderruflich gelöscht.</p>
+          </div>
+
+          <h2>6. Ihre Rechte (DSGVO)</h2>
+          <p>Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie das Recht auf Beschwerde bei einer Datenschutzaufsichtsbehörde.</p>
+
+          <h2>7. Kontakt</h2>
+          <p>Bei Fragen erreichen Sie uns jederzeit unter:<br>
+          <span class="contact-badge">rantime.dev+movidapp@gmail.com</span></p>
+        `
+      },
+      pt: {
+        title: "Política de Privacidade",
+        lastUpdated: "Última atualização: 9 de outubro de 2026",
+        content: `
+          <h2>1. Responsável pelo Tratamento</h2>
+          <p>
+            O Responsável pelo tratamento dos dados pessoais é <strong>Rantime Dev</strong>, criador e gestor do <strong>Movidapp</strong>.<br>
+            Para qualquer questão relacionada com o RGPD (UE 2016/679), contacte-nos através de:<br>
+            <span class="contact-badge">rantime.dev+movidapp@gmail.com</span>
+          </p>
+
+          <h2>2. Categorias de Dados Recolhidos</h2>
+          <p>O Movidapp segue rigorosamente o princípio da minimização de dados (Privacy by Design):</p>
+          <ul>
+            <li><strong>Dados de Conta e Autenticação:</strong> Nome completo e e-mail fornecidos voluntariamente através do <strong>Google Sign-In</strong> ou <strong>Sign in with Apple</strong>. O Movidapp não recolhe nem armazena palavras-passe.</li>
+            <li><strong>Dados de Localização (GPS em Primeiro Plano):</strong> Com o seu consentimento explícito, acedemos à sua localização geográfica <em>exclusivamente</em> enquanto a aplicação está aberta em primeiro plano. É utilizado para exibir locais próximos e validar a proximidade (200m) ao enviar relatórios. <strong>O Movidapp nunca regista nem rastreia a sua localização em segundo plano.</strong></li>
+            <li><strong>Token de Notificação (Firebase Cloud Messaging):</strong> Identificador do dispositivo para o envio de notificações push em tempo real sobre locais favoritos.</li>
+            <li><strong>Conteúdo Gerado pelo Utilizador:</strong> Relatórios de afluência, novos locais sugeridos ou denúncias à comunidade.</li>
+            <li><strong>Preferências Locais:</strong> Preferências visuais (tema, idioma, unidades) guardadas estritamente na memória do seu dispositivo.</li>
+          </ul>
+
+          <h2>3. Finalidades e Bases Jurídicas do Tratamento</h2>
+          <ul>
+            <li><strong>Execução do Serviço (Art. 6.1.b RGPD):</strong> Criação de perfil, visualização do mapa em tempo real e gestão de favoritos.</li>
+            <li><strong>Consentimento do Utilizador (Art. 6.1.a RGPD):</strong> Acesso à localização GPS e envio de notificações push.</li>
+            <li><strong>Interesse Legítimo e Segurança (Art. 6.1.f RGPD):</strong> Prevenção de spam, fiabilidade do índice de confiança (Trust Score) e moderação de conteúdos.</li>
+          </ul>
+
+          <h2>4. Prestadores de Serviços e Transferência de Dados</h2>
+          <p>O Movidapp recorre a parceiros tecnológicos em conformidade com o RGPD:</p>
+          <ul>
+            <li><strong>Supabase Inc.:</strong> Infraestrutura de base de dados e autenticação alojada na União Europeia.</li>
+            <li><strong>Google Firebase (Google Ireland Ltd.):</strong> Serviço de envio de notificações push (FCM).</li>
+            <li><strong>CARTO & OpenStreetMap:</strong> Fornecimento de camadas cartográficas. Não são partilhados dados pessoais identificáveis com os fornecedores de mapas.</li>
+          </ul>
+
+          <h2>5. Conservação e Eliminação da Conta (Direito ao Apagamento)</h2>
+          <p>Os dados pessoais são conservados apenas enquanto a conta estiver ativa.</p>
+          <div class="highlight-box">
+            <p><strong>Como eliminar a sua conta e todos os dados associados:</strong><br>
+            1. <strong>Na Aplicação:</strong> Vá a <em>Definições</em> &rarr; toque em <em>"Eliminar conta"</em> e confirme.<br>
+            2. <strong>Pela Web / Sem a Aplicação:</strong> Envie um e-mail para <a href="mailto:rantime.dev+movidapp@gmail.com?subject=Pedido%20de%20Eliminacao%20de%20Conta%20Movidapp" style="color: #fff; font-weight: 600;">rantime.dev+movidapp@gmail.com</a> com o assunto <em>"Pedido de Eliminação de Conta"</em> indicando o seu e-mail registado. Os seus dados serão permanentemente eliminados em 48 horas úteis.</p>
+          </div>
+
+          <h2>6. Direitos do Titular dos Dados (RGPD)</h2>
+          <p>Tem o direito de aceder aos seus dados, solicitar a retificação ou eliminação, limitar o tratamento, a portabilidade e apresentar reclamação junto da autoridade de proteção de dados competente (CNPD).</p>
+
+          <h2>7. Contacto</h2>
+          <p>Para dúvidas sobre esta política, escreva-nos para:<br>
+          <span class="contact-badge">rantime.dev+movidapp@gmail.com</span></p>
+        `
+      }
+    };
+
+    function setLang(lang) {
+      if (!translations[lang]) lang = 'it';
+
+      const data = translations[lang];
+      document.getElementById('title').innerText = data.title;
+      document.getElementById('lastUpdated').innerText = data.lastUpdated;
+      document.getElementById('content').innerHTML = data.content;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Salva parametro nell'URL senza ricaricare la pagina
+      try {
+        const url = new URL(window.location);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url);
+      } catch (e) {}
+    }
+
+    // Rilevamento automatico lingua:
+    // 1. Controlla query parameter ?lang=...
+    // 2. Altrimenti controlla la lingua del browser
+    // 3. Fallback: 'it'
+    const params = new URLSearchParams(window.location.search);
+    const requestedLang = params.get('lang');
+    const browserLang = (navigator.language || navigator.userLanguage || '').substring(0, 2).toLowerCase();
+
+    if (requestedLang && translations[requestedLang]) {
+      setLang(requestedLang);
+    } else if (browserLang && translations[browserLang]) {
+      setLang(browserLang);
+    } else {
+      setLang('it');
+    }
+  </script>
+</body>
+</html>
