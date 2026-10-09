@@ -40,7 +40,7 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 840px;
       margin: 0 auto;
     }
 
@@ -86,9 +86,9 @@
     .nav-links {
       display: flex;
       justify-content: center;
-      gap: 16px;
-      margin-top: 12px;
-      margin-bottom: 24px;
+      gap: 12px;
+      margin-top: 8px;
+      margin-bottom: 20px;
       flex-wrap: wrap;
     }
 
@@ -112,10 +112,13 @@
 
     .lang-switcher {
       display: inline-flex;
-      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
       background: rgba(255, 255, 255, 0.05);
-      padding: 4px;
+      padding: 6px;
       border-radius: 12px;
+      border: 1px solid var(--card-border);
       margin-bottom: 24px;
     }
 
@@ -124,17 +127,22 @@
       border: none;
       color: var(--text-muted);
       padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
       border-radius: 8px;
       cursor: pointer;
-      font-weight: 600;
-      font-size: 13px;
-      transition: all 0.2s ease;
+      transition: all 0.2s;
+    }
+
+    .lang-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
     }
 
     .lang-btn.active {
       background: var(--primary);
       color: #fff;
-      box-shadow: 0 2px 10px var(--primary-glow);
+      box-shadow: 0 4px 12px var(--primary-glow);
     }
 
     h1 {
@@ -147,6 +155,7 @@
     .subtitle {
       color: var(--text-muted);
       font-size: 14px;
+      margin-bottom: 20px;
     }
 
     .card {
@@ -231,6 +240,15 @@
       font-size: 13px;
     }
 
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     .lang-section {
       display: none;
     }
@@ -241,12 +259,12 @@
 
     .code-box {
       background: rgba(0, 0, 0, 0.4);
-      padding: 12px 16px;
-      border-radius: 8px;
+      padding: 6px 12px;
+      border-radius: 6px;
       font-family: monospace;
       color: #93c5fd;
       display: inline-block;
-      margin: 6px 0 14px 0;
+      margin: 4px 0;
       word-break: break-all;
     }
   </style>
@@ -266,15 +284,19 @@
       </div>
 
       <div class="lang-switcher">
-        <button class="lang-btn active" onclick="setLang('it')">Italiano</button>
-        <button class="lang-btn" onclick="setLang('en')">English</button>
+        <button class="lang-btn active" data-lang="it" onclick="setLang('it')">🇮🇹 Italiano</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')">🇪🇸 Español</button>
+        <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
+        <button class="lang-btn" data-lang="de" onclick="setLang('de')">🇩🇪 Deutsch</button>
+        <button class="lang-btn" data-lang="pt" onclick="setLang('pt')">🇵🇹 Português</button>
       </div>
 
       <h1 id="page-title">Cancellazione Account & Dati</h1>
       <p class="subtitle" id="page-subtitle">Richiesta di rimozione permanente dell'account (Google Play & Apple Compliance)</p>
     </header>
 
-    <!-- SEZIONE ITALIANO -->
+    <!-- 1. ITALIANO -->
     <div id="content-it" class="lang-section active">
       <div class="card card-danger">
         <h2>⚠️ Diritto all'Oblio e Cancellazione</h2>
@@ -303,7 +325,7 @@
         </div>
 
         <p>Puoi cliccare direttamente sul pulsante in basso per aprire il tuo client di posta preconfigurato:</p>
-        <a href="mailto:rantime.dev+movidapp@gmail.com?subject=%5BMovidapp%5D%20Richiesta%20Cancellazione%20Account%20e%20Dati&body=Gentile%20Supporto%20Movidapp%20(Rantime)%2C%0A%0ARichiedo%20la%20cancellazione%20permanente%20del%20mio%20account%20Movidapp%20e%20di%20tutti%20i%20dati%20personali%20associati.%0A%0AIndirizzo%20email%20registrato%3A%20%5BINSERISCI%20QUI%20LA%20TUA%20EMAIL%5D%0ANome%20Utente%20o%20ID%20(se%20noto)%3A%20%0A%0AGrazie." class="btn-action">
+        <a href="mailto:rantime.dev+movidapp@gmail.com?subject=%5BMovidapp%5D%20Richiesta%20Cancellazione%20Account%20e%20Dati&body=Gentile%20Supporto%20Movidapp%20(Rantime)%2C%0A%0ARichiedo%20la%20cancellazione%20permanente%20del%20mio%20account%20Movidapp%20e%20di%20tutti%20i%20dati%20personali%20associati.%0A%0AIndirizzo%20email%20registrato%3A%20%5BINSERISCI%20QUI%20LA%20TUA%20EMAIL%5D%0A%0AGrazie." class="btn-action">
           ✉️ Invia Richiesta di Cancellazione
         </a>
       </div>
@@ -318,7 +340,7 @@
       </div>
     </div>
 
-    <!-- SEZIONE ENGLISH -->
+    <!-- 2. ENGLISH -->
     <div id="content-en" class="lang-section">
       <div class="card card-danger">
         <h2>⚠️ Right to Erasure & Account Deletion</h2>
@@ -362,28 +384,226 @@
       </div>
     </div>
 
+    <!-- 3. ESPAÑOL -->
+    <div id="content-es" class="lang-section">
+      <div class="card card-danger">
+        <h2>⚠️ Derecho al Olvido y Eliminación de Cuenta</h2>
+        <p>De conformidad con el <strong>Reglamento General de Protección de Datos (RGPD UE 2016/679)</strong> y las directrices de <strong>Google Play Store</strong> y <strong>Apple App Store</strong>, puedes solicitar en cualquier momento la eliminación total y permanente de tu cuenta de Movidapp y de todos los datos personales asociados.</p>
+        <p>Si ya has desinstalado la aplicación de tu dispositivo, no necesitas volver a instalarla: puedes enviar tu solicitud directamente desde esta página web.</p>
+      </div>
+
+      <div class="card">
+        <h2>📱 Método 1: Eliminación Directa en la App (Inmediata)</h2>
+        <p>Si aún tienes Movidapp instalada en tu teléfono:</p>
+        <ul>
+          <li>Abre <strong>Movidapp</strong> e inicia sesión.</li>
+          <li>Toca el icono de tu perfil en la navegación inferior.</li>
+          <li>Entra en <strong>Ajustes</strong> (icono de engranaje) y selecciona <strong>"Eliminar cuenta"</strong>.</li>
+          <li>Confirma la operación: tu cuenta y datos asociados se eliminarán inmediatamente de la base de datos.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>✉️ Método 2: Solicitud por Correo Web (App desinstalada)</h2>
+        <p>Si ya no tienes acceso a la app, envíanos un correo indicando la dirección con la que te registraste (vía Google Sign-In o Apple ID):</p>
+        
+        <div class="info-box">
+          <strong>Correo del Responsable:</strong> <span class="code-box">rantime.dev+movidapp@gmail.com</span><br>
+          <strong>Asunto recomendado:</strong> <code>[Movidapp] Solicitud eliminación de cuenta</code>
+        </div>
+
+        <p>Pulsa el botón de abajo para abrir tu cliente de correo con la solicitud precompletada:</p>
+        <a href="mailto:rantime.dev+movidapp@gmail.com?subject=%5BMovidapp%5D%20Solicitud%20de%20Eliminaci%C3%B3n%20de%20Cuenta%20y%20Datos&body=Estimado%20Soporte%20de%20Movidapp%20(Rantime)%2C%0A%0ASolicito%20la%20eliminaci%C3%B3n%20permanente%20de%20mi%20cuenta%20de%20Movidapp%20y%20todos%20los%20datos%20asociados.%0A%0ACorreo%20electr%C3%B3nico%20registrado%3A%20%5BINTRODUCE%20AQU%C3%8D%20TU%20CORREO%5D%0A%0AGracias." class="btn-action">
+          ✉️ Enviar Solicitud de Eliminación
+        </a>
+      </div>
+
+      <div class="card">
+        <h2>🔒 Datos eliminados y plazos de conservación</h2>
+        <ul>
+          <li><strong>Datos Eliminados:</strong> Correo electrónico, nombre completo, identificadores de cuenta (Supabase / Google / Apple UID), tokens FCM de notificaciones push y ajustes locales.</li>
+          <li><strong>Aportaciones y Favoritos:</strong> Los lugares favoritos se eliminan de forma permanente. Los reportes históricos de afluencia quedan anonimizados y agregados, sin ningún vínculo a tu identidad.</li>
+          <li><strong>Plazo de tramitación:</strong> Las solicitudes por correo se procesan y completan en un plazo máximo de <strong>48 horas laborables</strong> con confirmación escrita.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. FRANÇAIS -->
+    <div id="content-fr" class="lang-section">
+      <div class="card card-danger">
+        <h2>⚠️ Droit à l'Oubli et Suppression de Compte</h2>
+        <p>Conformément au <strong>Règlement Général sur la Protection des Données (RGPD UE 2016/679)</strong> ainsi qu'aux exigences de <strong>Google Play Store</strong> et <strong>Apple App Store</strong>, vous pouvez demander à tout moment la suppression définitive de votre compte Movidapp et de vos données associées.</p>
+        <p>Si vous avez déjà désinstallé l'application de votre appareil, vous n'avez pas besoin de la réinstaller : vous pouvez effectuer votre demande directement depuis cette page web.</p>
+      </div>
+
+      <div class="card">
+        <h2>📱 Méthode 1 : Suppression Directe dans l'App (Immédiate)</h2>
+        <p>Si l'application est toujours installée sur votre smartphone :</p>
+        <ul>
+          <li>Ouvrez <strong>Movidapp</strong> et connectez-vous.</li>
+          <li>Accédez à votre profil en bas de l'écran.</li>
+          <li>Ouvrez les <strong>Paramètres</strong> (icône d'engrenage) et appuyez sur <strong>"Supprimer le compte"</strong>.</li>
+          <li>Confirmez : votre compte et vos données personnelles sont effacés immédiatement de la base de données.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>✉️ Méthode 2 : Demande par E-mail (App désinstallée)</h2>
+        <p>Si vous n'avez plus accès à l'application, envoyez-nous un e-mail indiquant l'adresse utilisée lors de votre inscription (via Google Sign-In ou Apple ID) :</p>
+        
+        <div class="info-box">
+          <strong>E-mail du Responsable :</strong> <span class="code-box">rantime.dev+movidapp@gmail.com</span><br>
+          <strong>Objet recommandé :</strong> <code>[Movidapp] Demande de suppression de compte</code>
+        </div>
+
+        <p>Cliquez sur le bouton ci-dessous pour ouvrir votre messagerie avec la demande préremplie :</p>
+        <a href="mailto:rantime.dev+movidapp@gmail.com?subject=%5BMovidapp%5D%20Demande%20de%20Suppression%20de%20Compte%20et%20Donn%C3%A9es&body=Bonjour%20l'Equipe%20Movidapp%20(Rantime)%2C%0A%0AJe%20demande%20la%20suppression%20d%C3%A9finitive%20de%20mon%20compte%20Movidapp%20et%20de%20toutes%20mes%20donn%C3%A9es%20personnelles.%0A%0AAdresse%20e-mail%20du%20compte%20%3A%20%5BINSEREZ%20VOTRE%20EMAIL%20ICI%5D%0A%0AMerci." class="btn-action">
+          ✉️ Envoyer la Demande de Suppression
+        </a>
+      </div>
+
+      <div class="card">
+        <h2>🔒 Données supprimées et délais de conservation</h2>
+        <ul>
+          <li><strong>Données Effacées :</strong> Adresse e-mail, nom et prénom, identifiants d'authentification (Supabase / Google / Apple UID), jetons de notification push (FCM) et préférences personnelles.</li>
+          <li><strong>Lieux favoris et signaux :</strong> Vos lieux favoris sont supprimés définitivement. Les signaux d'affluence passés restent strictement agrégés et anonymisés, sans aucun lien avec votre profil.</li>
+          <li><strong>Délai de traitement :</strong> Les demandes par e-mail sont traitées sous <strong>48 heures ouvrées</strong> avec confirmation par e-mail.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. DEUTSCH -->
+    <div id="content-de" class="lang-section">
+      <div class="card card-danger">
+        <h2>⚠️ Recht auf Löschung & Kontolöschung</h2>
+        <p>Gemäß der <strong>Datenschutz-Grundverordnung (DSGVO EU 2016/679)</strong> sowie den Richtlinien von <strong>Google Play Store</strong> und <strong>Apple App Store</strong> können Sie jederzeit die vollständige und dauerhafte Löschung Ihres Movidapp-Kontos und aller zugehörigen Daten verlangen.</p>
+        <p>Falls Sie die App bereits von Ihrem Smartphone deinstalliert haben, müssen Sie sie nicht erneut installieren: Sie können die Anfrage direkt über diese Webseite stellen.</p>
+      </div>
+
+      <div class="card">
+        <h2>📱 Option 1: Direkte Löschung in der App (Sofort)</h2>
+        <p>Wenn Movidapp noch auf Ihrem Smartphone installiert ist:</p>
+        <ul>
+          <li>Öffnen Sie <strong>Movidapp</strong> und melden Sie sich an.</li>
+          <li>Tippen Sie unten rechts auf Ihr Profil.</li>
+          <li>Gehen Sie zu <strong>Einstellungen</strong> (Zahnrad-Symbol) und wählen Sie <strong>"Konto löschen"</strong>.</li>
+          <li>Bestätigen Sie den Vorgang: Ihr Konto und Ihre Daten werden unverzüglich aus der Datenbank gelöscht.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>✉️ Option 2: Anfrage per E-Mail (App deinstalliert)</h2>
+        <p>Wenn Sie keinen Zugriff mehr auf die App haben, senden Sie uns eine E-Mail mit der bei der Registrierung genutzten Adresse (via Google Sign-In oder Apple ID):</p>
+        
+        <div class="info-box">
+          <strong>E-Mail des Verantwortlichen:</strong> <span class="code-box">rantime.dev+movidapp@gmail.com</span><br>
+          <strong>Betreff:</strong> <code>[Movidapp] Kontolöschung Anfrage</code>
+        </div>
+
+        <p>Klicken Sie auf den Button, um Ihr E-Mail-Programm mit vorbereiteter Anfrage zu öffnen:</p>
+        <a href="mailto:rantime.dev+movidapp@gmail.com?subject=%5BMovidapp%5D%20Antrag%20auf%20Kontol%C3%B6schung%20und%20Datenentfernung&body=Hallo%20Movidapp%20Support%20(Rantime)%2C%0A%0Abitte%20l%C3%B6schen%20Sie%20mein%20Movidapp-Konto%20und%20alle%20damit%20verbundenen%20personenbezogenen%20Daten%20dauerhaft.%0A%0ARegistrierte%20E-Mail-Adresse%3A%20%5BHIE%20E-MAIL%20EINTRAGEN%5D%0A%0AVielen%20Dank." class="btn-action">
+          ✉️ Löschungsantrag Senden
+        </a>
+      </div>
+
+      <div class="card">
+        <h2>🔒 Gelöschte Daten und Speicherfristen</h2>
+        <ul>
+          <li><strong>Gelöschte Daten:</strong> E-Mail-Adresse, Name, Authentifizierungs-IDs (Supabase / Google / Apple UID), Push-Benachrichtigungs-Tokens (FCM) und Einstellungen.</li>
+          <li><strong>Favoriten & Meldungen:</strong> Favorisierte Orte werden dauerhaft entfernt. Vergangene Auslastungsmeldungen verbleiben rein aggregiert und vollständig anonymisiert im System.</li>
+          <li><strong>Bearbeitungszeit:</strong> Per E-Mail eingereichte Anfragen werden innerhalb von maximal <strong>48 Arbeitsstunden</strong> bearbeitet und schriftlich bestätigt.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. PORTUGUÊS -->
+    <div id="content-pt" class="lang-section">
+      <div class="card card-danger">
+        <h2>⚠️ Direito ao Esquecimento e Eliminação de Conta</h2>
+        <p>Em conformidade com o <strong>Regulamento Geral sobre a Proteção de Dados (RGPD UE 2016/679)</strong> e as normas da <strong>Google Play Store</strong> e <strong>Apple App Store</strong>, pode solicitar a qualquer momento a eliminação permanente da sua conta Movidapp e de todos os dados pessoais associados.</p>
+        <p>Se já desinstalou a aplicação do seu dispositivo móvel, não precisa de a reinstalar: pode enviar o seu pedido diretamente a partir desta página web.</p>
+      </div>
+
+      <div class="card">
+        <h2>📱 Método 1: Eliminação Direta na App (Imediata)</h2>
+        <p>Se ainda tem o Movidapp instalado no seu smartphone:</p>
+        <ul>
+          <li>Abra o <strong>Movidapp</strong> e inicie sessão.</li>
+          <li>Toque no separador de perfil na barra inferior.</li>
+          <li>Aceda a <strong>Definições</strong> (ícone de engrenagem) e selecione <strong>"Eliminar Conta"</strong>.</li>
+          <li>Confirme: a sua conta e dados pessoais serão permanentemente eliminados da base de dados.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>✉️ Método 2: Pedido por E-mail (App desinstalada)</h2>
+        <p>Caso já não tenha acesso à aplicação, envie-nos um e-mail indicando o endereço com o qual se registou (via Google Sign-In ou Apple ID):</p>
+        
+        <div class="info-box">
+          <strong>E-mail do Responsável:</strong> <span class="code-box">rantime.dev+movidapp@gmail.com</span><br>
+          <strong>Assunto recomendado:</strong> <code>[Movidapp] Pedido de eliminação de conta</code>
+        </div>
+
+        <p>Clique no botão abaixo para abrir o seu cliente de e-mail com o pedido predefinido:</p>
+        <a href="mailto:rantime.dev+movidapp@gmail.com?subject=%5BMovidapp%5D%20Pedido%20de%20Elimina%C3%A7%C3%A3o%20de%20Conta%20e%20Dados&body=Ol%C3%A1%20Suporte%20Movidapp%20(Rantime)%2C%0A%0ASolicito%20a%20elimina%C3%A7%C3%A3o%20permanente%20da%20minha%20conta%20Movidapp%20e%20de%20todos%20os%20dados%20pessoais%20associados.%0A%0AE-mail%20registado%3A%20%5BINSIRA%20AQUI%20O%20SEU%20E-MAIL%5D%0A%0AObrigado." class="btn-action">
+          ✉️ Enviar Pedido de Eliminação
+        </a>
+      </div>
+
+      <div class="card">
+        <h2>🔒 Dados eliminados e prazos de retenção</h2>
+        <ul>
+          <li><strong>Dados Eliminados:</strong> Endereço de e-mail, nome completo, identificadores de conta (Supabase / Google / Apple UID), tokens de notificação push (FCM) e preferências.</li>
+          <li><strong>Locais Favoritos e Relatórios:</strong> Os locais favoritos são removidos permanentemente. Históricos de afluência permanecem apenas agregados e totalmente anonimizados.</li>
+          <li><strong>Prazo de resolução:</strong> Os pedidos enviados por e-mail são processados no prazo máximo de <strong>48 horas úteis</strong> com confirmação por e-mail.</li>
+        </ul>
+      </div>
+    </div>
+
     <footer>
       &copy; 2026 Movidapp &bull; Rantime<br>
-      Supporto: <a href="mailto:rantime.dev+movidapp@gmail.com" style="color: #9aa3be;">rantime.dev+movidapp@gmail.com</a>
+      Supporto: <a href="mailto:rantime.dev+movidapp@gmail.com">rantime.dev+movidapp@gmail.com</a> &bull;
+      <a href="privacy.html">Privacy Policy</a> &bull;
+      <a href="support.html">Assistenza FAQ</a>
     </footer>
   </div>
 
   <script>
+    const titles = {
+      it: { title: "Cancellazione Account & Dati", subtitle: "Richiesta di rimozione permanente dell'account (Google Play & Apple Compliance)" },
+      en: { title: "Account & Data Deletion", subtitle: "Permanent account removal request (Google Play & Apple Compliance)" },
+      es: { title: "Eliminación de Cuenta y Datos", subtitle: "Solicitud de eliminación permanente de cuenta (Google Play & Apple Compliance)" },
+      fr: { title: "Suppression de Compte & Données", subtitle: "Demande de suppression définitive du compte (Google Play & Apple Compliance)" },
+      de: { title: "Konto- und Datenlöschung", subtitle: "Antrag auf dauerhafte Kontolöschung (Google Play & Apple Compliance)" },
+      pt: { title: "Eliminação de Conta e Dados", subtitle: "Pedido de remoção permanente da conta (Google Play & Apple Compliance)" }
+    };
+
     function setLang(lang) {
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelectorAll('.lang-section').forEach(sec => sec.classList.remove('active'));
 
-      if (lang === 'it') {
-        document.querySelector("button[onclick=\"setLang('it')\"]").classList.add('active');
-        document.getElementById('content-it').classList.add('active');
-        document.getElementById('page-title').innerText = "Cancellazione Account & Dati";
-        document.getElementById('page-subtitle').innerText = "Richiesta di rimozione permanente dell'account (Google Play & Apple Compliance)";
-      } else {
-        document.querySelector("button[onclick=\"setLang('en')\"]").classList.add('active');
-        document.getElementById('content-en').classList.add('active');
-        document.getElementById('page-title').innerText = "Account & Data Deletion";
-        document.getElementById('page-subtitle').innerText = "Permanent account removal request (Google Play & Apple Compliance)";
+      const activeBtn = document.querySelector(`.lang-btn[data-lang="${lang}"]`);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const activeSection = document.getElementById(`content-${lang}`);
+      if (activeSection) activeSection.classList.add('active');
+
+      if (titles[lang]) {
+        document.getElementById('page-title').innerText = titles[lang].title;
+        document.getElementById('page-subtitle').innerText = titles[lang].subtitle;
       }
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const requestedLang = urlParams.get('lang');
+    const browserLang = (navigator.language || navigator.userLanguage || 'it').substring(0, 2).toLowerCase();
+
+    if (requestedLang && titles[requestedLang]) {
+      setLang(requestedLang);
+    } else if (browserLang && titles[browserLang]) {
+      setLang(browserLang);
+    } else {
+      setLang('it');
     }
   </script>
 </body>
