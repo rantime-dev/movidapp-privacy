@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termini di Servizio - Movidapp</title>
+  <meta name="description" content="Termini e Condizioni di Utilizzo di Movidapp per Apple App Store e Google Play Store.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0b0d13;
+      --card-bg: rgba(26, 30, 43, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #3e65ff;
+      --primary-glow: rgba(62, 101, 255, 0.25);
+      --accent: #ff6e84;
+      --text-main: #f0f3fa;
+      --text-muted: #9aa3be;
+      --text-dim: #6c7693;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 32px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 16px 0;
+    }
+
+    .logo-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding: 10px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      box-shadow: 0 8px 24px var(--primary-glow);
+    }
+
+    .logo-badge {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      background: linear-gradient(135deg, #ffffff, #a3b8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: #fff;
+      background: rgba(62, 101, 255, 0.15);
+      border-color: rgba(62, 101, 255, 0.4);
+    }
+
+    .lang-switcher {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 6px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 12px var(--primary-glow);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+      padding-left: 4px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+      color: var(--text-muted);
+      font-size: 14.5px;
+    }
+
+    li strong {
+      color: var(--text-main);
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 8px;
+      color: var(--primary);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .highlight-box {
+      background: rgba(62, 101, 255, 0.08);
+      border: 1px solid rgba(62, 101, 255, 0.25);
+      border-radius: 12px;
+      padding: 18px;
+      margin: 22px 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      color: #d1dcff;
+      font-size: 14px;
+    }
+
+    .warning-box {
+      background: rgba(255, 110, 132, 0.08);
+      border: 1px solid rgba(255, 110, 132, 0.25);
+      border-radius: 12px;
+      padding: 18px;
+      margin: 22px 0;
+    }
+
+    .warning-box p {
+      margin-bottom: 0;
+      color: #ffd8df;
+      font-size: 14px;
+    }
+
+    .contact-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      color: #ffffff;
+      font-family: monospace;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 0 16px;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <div class="logo-badge">M</div>
+        <div class="brand-name">Movidapp</div>
+      </div>
+
+      <div class="nav-links">
+        <a href="terms.html" class="active">Termini di Servizio</a>
+        <a href="privacy.html">Informativa Privacy</a>
+        <a href="support.html">Supporto & FAQ</a>
+        <a href="delete-account.html">Elimina Account</a>
+      </div>
+
+      <h1 id="title">Termini di Servizio</h1>
+      <div class="subtitle" id="lastUpdated">Ultimo aggiornamento: 20 Ottobre 2026</div>
+
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="it" onclick="setLang('it')">🇮🇹 Italiano</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')">🇪🇸 Español</button>
+        <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
+        <button class="lang-btn" data-lang="de" onclick="setLang('de')">🇩🇪 Deutsch</button>
+        <button class="lang-btn" data-lang="pt" onclick="setLang('pt')">🇵🇹 Português</button>
+      </div>
+    </header>
+
+    <main class="card" id="content">
+      <!-- Popolato dinamicamente in base alla lingua -->
+    </main>
+
+    <footer>
+      &copy; 2026 Movidapp &bull; Rantime<br>
+      Supporto: <a href="mailto:rantime.dev+movidapp@gmail.com">rantime.dev+movidapp@gmail.com</a> &bull;
+      <a href="privacy.html">Informativa Privacy</a> &bull;
+      <a href="support.html">Assistenza FAQ</a> &bull;
+      <a href="delete-account.html">Elimina Account</a>
+    </footer>
+  </div>
+
+  <script>
+    const translations = {
+      it: {
+        title: "Termini di Servizio",
+        lastUpdated: "Ultimo aggiornamento: 20 Ottobre 2026",
+        content: `
+          <h2>1. Accordo Contrattuale</h2>
+          <p>
+            I presenti Termini di Servizio costituiscono un accordo legalmente vincolante stipulato tra l'utente, sia a titolo personale sia per conto di un'entità (<strong>"Utente"</strong> o <strong>"tu"</strong>), e <strong>Movidapp</strong> (progetto sviluppato e gestito da <strong>Rantime</strong>, di seguito <strong>"noi"</strong>, <strong>"ci"</strong> o <strong>"nostro"</strong>), riguardante l'accesso e l'utilizzo dell'applicazione mobile Movidapp e dei relativi servizi web collegati.
+          </p>
+          <p>
+            Accedendo all'Applicazione, effettuando la registrazione o continuando a utilizzarne le funzionalità, confermi espressamente di aver letto, compreso e accettato integralmente i presenti Termini e l'<a href="privacy.html" style="color: var(--primary);">Informativa sulla Privacy</a>. Se non accetti i presenti Termini, sei tenuto a non utilizzare l'Applicazione.
+          </p>
+
+          <h2>2. Requisiti di Età e Idoneità</h2>
+          <p>
+            L'Applicazione è destinata esclusivamente a utenti che abbiano compiuto almeno <strong>16 anni</strong> di età (o la maggiore età legale prevista per l'accesso ai locali di intrattenimento notturno o alla somministrazione di bevande alcoliche nella giurisdizione di appartenenza). Con l'accesso, dichiari e garantisci di possedere la capacità giuridica per stipulare il presente accordo.
+          </p>
+
+          <h2>3. Finalità del Servizio ed Esclusione di Responsabilità per Dati Terzi</h2>
+          <p>
+            Movidapp ha come <strong>esclusivo scopo</strong> quello di stimare, monitorare e condividere l'affluenza in tempo reale, l'atmosfera e la vivacità dei luoghi di ritrovo e della vita notturna tramite algoritmi di stima aggregata e segnalazioni spontanee della community.
+          </p>
+          <ul>
+            <li><strong>Nessuna garanzia su orari o stato di apertura:</strong> Movidapp non è una guida commerciale, né un registro ufficiale degli esercizi pubblici. Non garantiamo, non certifichiamo e non gestiamo orari di apertura, contatti, stato effettivo di attività, programmazione eventi, prezzi o servizi offerti dai singoli locali.</li>
+            <li><strong>Onere di verifica autonoma:</strong> L'Utente è sempre tenuto a verificare in modo indipendente orari e aperture attraverso canali ufficiali dell'esercente (es. social network del locale, sito web, telefono) o mappe di terze parti (come Google Maps) prima di mettersi in viaggio o pianificare spostamenti.</li>
+            <li><strong>Esonero di responsabilità:</strong> Movidapp non risponde in alcun modo di eventuali orari errati, chiusure straordinarie, variazioni di programma, file all'ingresso, spese di viaggio o imprecisioni relative a informazioni commerciali esterne.</li>
+          </ul>
+
+          <h2>4. Contenuti Generati dall'Utente (UGC) e Moderazione</h2>
+          <p>
+            L'Applicazione consente agli utenti autenticati di inviare segnalazioni di affluenza in tempo reale, suggerire nuovi locali, correggere dettagli o esprimere valutazioni sulla vivacità dell'ambiente (<strong>"Contenuti dell'Utente"</strong>).
+          </p>
+          <ul>
+            <li><strong>Divieto di contenuti illeciti:</strong> È severamente vietato inserire informazioni false, ingannevoli, diffamatorie, offensive, oscene, minacciose, discriminatorie, pubblicità o spam non autorizzato.</li>
+            <li><strong>Notice & Take Down (DSA / D.Lgs 70/2003):</strong> Movidapp opera come intermediario tecnico passivo per i contenuti generati dagli utenti. Qualsiasi utente o esercente può segnalare un contenuto ritenuto errato o lesivo tramite l'apposito tasto in-app ("Segnala") o via email a <a href="mailto:rantime.dev+movidapp@gmail.com" style="color: #fff;">rantime.dev+movidapp@gmail.com</a>.</li>
+            <li><strong>Impegno di rimozione in 24 ore:</strong> Ci impegniamo a verificare e rimuovere i contenuti non conformi o lesivi entro 24 ore dalla segnalazione, riservandoci la facoltà di sospendere o cancellare definitivamente gli account responsabili di condotte abusive.</li>
+          </ul>
+
+          <h2>5. Canale Esercenti & Gestione Schede Locali</h2>
+          <div class="highlight-box">
+            <p>
+              I dati di base degli esercizi pubblici (nome, indirizzo e coordinate) derivano da cartografie pubbliche aperte (OpenStreetMap) e da inserimenti della community. I titolari o gestori di attività censite che desiderano richiedere l'aggiornamento, la verifica, la rettifica o l'oscuramento della scheda del proprio locale possono contattarci direttamente all'indirizzo dedicato:
+              <br><span class="contact-badge">rantime.dev+movidapp@gmail.com</span><br>
+              Ogni richiesta motivata proveniente dal gestore viene presa in carico e gestita con la massima priorità entro 24-48 ore lavorative.
+            </p>
+          </div>
+
+          <h2>6. Sistema di Affidabilità (Trust Score)</h2>
+          <p>
+            Ogni profilo utente include un indicatore di affidabilità (<strong>Trust Score</strong>) calcolato algoritmicamente in base alla congruenza e qualità delle segnalazioni inviate e alla vicinanza geografica reale (raggio 200 metri). L'invio di segnalazioni mendaci, spam o comportamenti contrari ai presenti Termini comporta una decurtazione del punteggio, con conseguente limitazione automatica o revoca dell'accesso alle funzionalità dell'app.
+          </p>
+
+          <h2>7. Sicurezza Stradale & Divieto di Utilizzo alla Guida</h2>
+          <div class="warning-box">
+            <p>
+              <strong>AVVISO FONDAMENTALE DI SICUREZZA STRADALE:</strong><br>
+              È severamente vietato utilizzare, consultare o interagire con Movidapp durante la guida di qualsiasi veicolo (auto, moto, scooter, bicicletta, monopattino). L'applicazione deve essere utilizzata esclusivamente da passeggeri o da veicolo fermo e in sosta regolare. L'Utente è l'unico ed esclusivo responsabile del rispetto delle norme del Codice della Strada. Movidapp declina qualsivoglia responsabilità per sinistri, incidenti stradali, lesioni personali, danni a cose o sanzioni amministrative derivanti dalla violazione di tale divieto.
+            </p>
+          </div>
+
+          <h2>8. Proprietà Intellettuale</h2>
+          <p>
+            L'Applicazione, il codice sorgente, i database, la grafica, i marchi, i loghi, il design delle interfacce e le funzionalità proprietarie sono di titolarità esclusiva di <strong>Rantime</strong> e protetti dalle leggi vigenti sul diritto d'autore e sulla proprietà industriale. I dati cartografici sono forniti da CARTO e dai contributori di OpenStreetMap (licenza ODbL).
+          </p>
+
+          <h2>9. Clausola di Manleva (Indennizzo)</h2>
+          <p>
+            L'Utente accetta espressamente di difendere, manlevare e tenere indenne Movidapp, il suo ideatore, sviluppatore, fornitori di hosting e collaboratori da e contro qualsiasi pretesa, reclamo, richiesta di risarcimento, responsabilità, perdita, costo o spesa (incluse le ragionevoli spese legali) derivante da:
+          </p>
+          <ul>
+            <li>L'utilizzo improprio o illecito dell'Applicazione;</li>
+            <li>Qualsiasi Contenuto dell'Utente pubblicato o trasmesso;</li>
+            <li>La violazione dei presenti Termini di Servizio o di diritti di terzi;</li>
+            <li>Comportamenti, controversie o fatti avvenuti all'interno o nelle vicinanze dei locali visualizzati sull'app.</li>
+          </ul>
+
+          <h2>10. Limitazione Generale di Responsabilità</h2>
+          <p>
+            L'Applicazione viene fornita <strong>"così com'è" ("AS IS")</strong> e <strong>"secondo disponibilità" ("AS AVAILABLE")</strong>, senza garanzie di alcun tipo, esplicite o implicite. Nei limiti massimi consentiti dalla legge applicabile, Movidapp non sarà in alcun caso responsabile per danni diretti, indiretti, incidentali, speciali, consequenziali o punitivi (inclusi mancati guadagni, interruzione dell'attività o perdita di dati) derivanti dall'uso o dall'impossibilità di usare l'Applicazione.
+          </p>
+
+          <h2>11. Modifiche ai Termini e Legge Applicabile</h2>
+          <p>
+            Ci riserviamo il diritto di aggiornare o modificare i presenti Termini in qualsiasi momento per adeguarli a novità normative o evoluzioni del servizio. Le modifiche avranno efficacia dalla data di pubblicazione della versione aggiornata. L'uso continuato dell'Applicazione dopo la pubblicazione costituisce integrale accettazione delle modifiche.
+          </p>
+          <p>
+            I presenti Termini sono regolati e interpretati in conformità alla <strong>legge italiana</strong>. Per qualsiasi controversia civile derivante dall'interpretazione o esecuzione del presente accordo, la competenza territoriale esclusiva è attribuita al Foro competente per legge.
+          </p>
+
+          <h2>12. Contatti e Reclami</h2>
+          <p>
+            Per qualsiasi chiarimento, segnalazione o comunicazione relativa ai presenti Termini di Servizio, è possibile scrivere a:<br>
+            <span class="contact-badge">rantime.dev+movidapp@gmail.com</span>
+          </p>
+        `
+      },
+      en: {
+        title: "Terms of Service",
+        lastUpdated: "Last updated: October 20, 2026",
+        content: `
+          <h2>1. Binding Agreement</h2>
+          <p>
+            These Terms of Service constitute a legally binding agreement between you, whether personally or on behalf of an entity (<strong>"User"</strong> or <strong>"you"</strong>), and <strong>Movidapp</strong> (operated and developed by <strong>Rantime</strong>, hereinafter <strong>"we"</strong>, <strong>"us"</strong>, or <strong>"our"</strong>), regarding your access to and use of the Movidapp mobile application and related web services.
+          </p>
+          <p>
+            By accessing the Application, registering an account, or continuing to use the service, you acknowledge that you have read, understood, and agreed to be bound by all of these Terms and our <a href="privacy.html" style="color: var(--primary);">Privacy Policy</a>. If you do not agree, you must immediately discontinue use of the Application.
+          </p>
+
+          <h2>2. Age and Eligibility Requirements</h2>
+          <p>
+            The Application is intended exclusively for users who are at least <strong>16 years old</strong> (or the legal age required in your jurisdiction for nightlife venues or alcohol consumption establishments). By using Movidapp, you represent and warrant that you have the legal capacity to enter into these Terms.
+          </p>
+
+          <h2>3. Nature of Service & Disclaimer for Third-Party Data</h2>
+          <p>
+            Movidapp's <strong>sole objective</strong> is to estimate, monitor, and visualize real-time venue crowd levels, vibe, and nightlife atmosphere through aggregated statistical algorithms and community reports.
+          </p>
+          <ul>
+            <li><strong>No guarantee of hours or open status:</strong> Movidapp is not a commercial business directory or official venue registry. We do not guarantee, verify, or manage venue operating hours, phone numbers, actual opening status, event schedules, pricing, or amenities.</li>
+            <li><strong>Duty of independent verification:</strong> Users must always independently verify operating status and schedules through the venue's official channels (official social media profiles, website, phone call) or third-party navigation apps (e.g. Google Maps) prior to traveling.</li>
+            <li><strong>Exclusion of liability:</strong> Movidapp disclaims all liability for incorrect business hours, unexpected venue closures, event cancellations, admission queues, travel expenses, or external inaccuracies.</li>
+          </ul>
+
+          <h2>4. User-Generated Content (UGC) & Notice-and-Takedown</h2>
+          <p>
+            The Application allows authenticated users to submit real-time crowd signals, suggest new venues, suggest corrections, and rate atmosphere (<strong>"User Content"</strong>).
+          </p>
+          <ul>
+            <li><strong>Prohibited conduct:</strong> Submitting false, misleading, defamatory, offensive, harassing, obscene, fraudulent, or promotional spam content is strictly prohibited.</li>
+            <li><strong>Notice and Take Down (EU DSA Compliance):</strong> Movidapp operates as a technical intermediary. Any user or venue owner can report improper content through the in-app "Report" button or via email to <a href="mailto:rantime.dev+movidapp@gmail.com" style="color: #fff;">rantime.dev+movidapp@gmail.com</a>.</li>
+            <li><strong>24-Hour Removal Commitment:</strong> We commit to reviewing and taking down objectionable content within 24 hours of receiving a report, and we reserve the right to permanently terminate abusive accounts.</li>
+          </ul>
+
+          <h2>5. Venue Operators & Business Listings</h2>
+          <div class="highlight-box">
+            <p>
+              Basic venue information (name, address, coordinates) originates from open collaborative data (OpenStreetMap) and community submissions. Business owners or managers wishing to verify, update, correct, or delist their venue profile may contact us directly at:
+              <br><span class="contact-badge">rantime.dev+movidapp@gmail.com</span><br>
+              Legitimate operator requests are processed with priority within 24-48 business hours.
+            </p>
+          </div>
+
+          <h2>6. Trust Score & Reputation System</h2>
+          <p>
+            Each user profile features a <strong>Trust Score</strong> calculated algorithmically based on submission consistency, community validation, and physical proximity verification (200-meter radius). Submitting inaccurate or spam signals reduces your Trust Score, leading to automated feature restrictions or permanent suspension.
+          </p>
+
+          <h2>7. Road Safety Warning - Do Not Use While Driving</h2>
+          <div class="warning-box">
+            <p>
+              <strong>CRITICAL ROAD SAFETY NOTICE:</strong><br>
+              Interacting with or viewing Movidapp while operating any motor vehicle, motorcycle, scooter, or bicycle is strictly prohibited. The Application may only be used by passengers or when safely parked. The User bears sole responsibility for compliance with traffic regulations. Movidapp accepts no liability for vehicle collisions, personal injuries, property damage, or traffic violations resulting from driver distraction.
+            </p>
+          </div>
+
+          <h2>8. Intellectual Property Rights</h2>
+          <p>
+            The Application, software source code, databases, graphical assets, trademarks, branding, user interfaces, and custom features are the exclusive property of <strong>Rantime</strong> and are protected by applicable intellectual property laws. Cartographic map tiles are provided by CARTO and OpenStreetMap contributors (ODbL license).
+          </p>
+
+          <h2>9. Indemnification</h2>
+          <p>
+            You agree to defend, indemnify, and hold harmless Movidapp, its developer, hosting providers, and affiliates from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or related to:
+          </p>
+          <ul>
+            <li>Your misuse or unlawful use of the Application;</li>
+            <li>Any User Content you submit or transmit;</li>
+            <li>Your violation of these Terms of Service or third-party rights;</li>
+            <li>Any incidents, disputes, or events occurring at or near venues shown in the app.</li>
+          </ul>
+
+          <h2>10. Limitation of Liability</h2>
+          <p>
+            The Application is provided strictly <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> without warranties of any kind. To the maximum extent permitted by law, Movidapp shall not be liable for any indirect, incidental, special, consequential, or punitive damages (including loss of profits, goodwill, or data) arising from your use or inability to use the Application.
+          </p>
+
+          <h2>11. Governing Law & Jurisdiction</h2>
+          <p>
+            These Terms are governed by and construed in accordance with the laws of <strong>Italy</strong> (and applicable European Union consumer protections). Any disputes shall be subject to the competent courts of Italy.
+          </p>
+
+          <h2>12. Contact & Support</h2>
+          <p>
+            If you have questions, inquiries, or feedback regarding these Terms of Service, please contact us at:<br>
+            <span class="contact-badge">rantime.dev+movidapp@gmail.com</span>
+          </p>
+        `
+      },
+      es: {
+        title: "Términos de Servicio",
+        lastUpdated: "Última actualización: 20 de octubre de 2026",
+        content: `
+          <h2>1. Acuerdo Legal Vinculante</h2>
+          <p>
+            Los presentes Términos de Servicio constituyen un acuerdo legalmente vinculante entre usted (<strong>"Usuario"</strong> o <strong>"tú"</strong>) y <strong>Movidapp</strong> (proyecto desarrollado y gestionado por <strong>Rantime</strong>, en adelante <strong>"nosotros"</strong> o <strong>"nuestro"</strong>), relativo al acceso y uso de la aplicación móvil Movidapp y sus servicios web.
+          </p>
+          <p>
+            Al acceder a la Aplicación o registrarse, declara haber leído, comprendido y aceptado en su totalidad estos Términos y la <a href="privacy.html" style="color: var(--primary);">Política de Privacidad</a>.
+          </p>
+
+          <h2>2. Requisitos de Edad</h2>
+          <p>
+            La Aplicación está destinada exclusivamente a personas mayores de <strong>16 años</strong> (o la edad legal aplicable en su jurisdicción para el ocio nocturno y locales con venta de alcohol).
+          </p>
+
+          <h2>3. Finalidad del Servicio y Exclusión de Responsabilidad</h2>
+          <p>
+            El <strong>único propósito</strong> de Movidapp es estimar y monitorizar la afluencia en tiempo real y el ambiente de locales mediante datos estadísticos agregados y reportes de la comunidad.
+          </p>
+          <ul>
+            <li><strong>Sin garantía de horarios:</strong> Movidapp no es una guía comercial oficial. No garantizamos ni gestionamos horarios de apertura, teléfonos, estado real de apertura, eventos o servicios.</li>
+            <li><strong>Obligación de verificación:</strong> El usuario debe comprobar siempre de forma independiente el horario a través de canales oficiales del local o aplicaciones externas (ej. Google Maps) antes de desplazarse.</li>
+            <li><strong>Exclusión de responsabilidad:</strong> Movidapp no se responsabiliza por horarios erróneos, cierres extraordinarios o gastos de desplazamiento.</li>
+          </ul>
+
+          <h2>4. Contenido Generado por el Usuario y Moderación (DSA)</h2>
+          <p>
+            La Aplicación permite publicar reportes de afluencia, nuevos locales y opiniones. Queda terminantemente prohibido publicar contenidos falsos, difamatorios, ofensivos o publicitarios no autorizados. Nos comprometemos a revisar y retirar cualquier contenido ilícito dentro de las <strong>24 horas</strong> posteriores a la denuncia.
+          </p>
+
+          <h2>5. Canal para Propietarios de Locales</h2>
+          <div class="highlight-box">
+            <p>
+              Los datos identificativos básicos proceden de fuentes abiertas (OpenStreetMap). Los propietarios que deseen solicitar la rectificación o retirada de su ficha pueden escribir a:
+              <br><span class="contact-badge">rantime.dev+movidapp@gmail.com</span><br>
+              Las solicitudes se tramitan de forma prioritaria en un plazo de 24-48 horas laborables.
+            </p>
+          </div>
+
+          <h2>6. Seguridad Vial: Prohibido el Uso al Conducir</h2>
+          <div class="warning-box">
+            <p>
+              <strong>ADVERTENCIA DE SEGURIDAD VIAL:</strong><br>
+              Está estrictamente prohibido utilizar o consultar Movidapp mientras conduce vehículos de cualquier tipo. El uso debe realizarse únicamente por pasajeros o con el vehículo estacionado. Movidapp no asume ninguna responsabilidad por infracciones o accidentes viales.
+            </p>
+          </div>
+
+          <h2>7. Indemnización y Limitación de Responsabilidad</h2>
+          <p>
+            El usuario acepta mantener indemne a Movidapp frente a reclamaciones derivadas del uso indebido de la app o de los contenidos publicados. La app se proporciona <strong>"tal cual" ("AS IS")</strong> sin garantías explícitas o implícitas.
+          </p>
+
+          <h2>8. Contacto</h2>
+          <p>Para consultas o reclamaciones:<br><span class="contact-badge">rantime.dev+movidapp@gmail.com</span></p>
+        `
+      },
+      fr: {
+        title: "Conditions d'Utilisation",
+        lastUpdated: "Dernière mise à jour : 20 octobre 2026",
+        content: `
+          <h2>1. Accord Contractuel</h2>
+          <p>
+            Les présentes Conditions d'Utilisation constituent un accord juridiquement contraignant entre vous (<strong>« Utilisateur »</strong>) et <strong>Movidapp</strong> (développé par <strong>Rantime</strong>), concernant l'utilisation de l'application mobile Movidapp.
+          </p>
+          <p>
+            En accédant à l'Application, vous confirmez avoir lu et accepté l'ensemble de ces Conditions ainsi que notre <a href="privacy.html" style="color: var(--primary);">Politique de Confidentialité</a>.
+          </p>
+
+          <h2>2. Conditions d'Âge</h2>
+          <p>
+            L'Application est exclusivement réservée aux personnes âgées d'au moins <strong>16 ans</strong> (ou l'âge légal d'accès aux établissements de vie nocturne dans votre juridiction).
+          </p>
+
+          <h2>3. Objet du Service & Clause de Non-Responsabilité</h2>
+          <p>
+            Movidapp a pour unique objet d'estimer et de suivre l'affluence et l'ambiance des établissements en temps réel grâce à des rapports communautaires agrégés.
+          </p>
+          <ul>
+            <li><strong>Aucune garantie d'horaires :</strong> Movidapp n'est pas un annuaire commercial officiel et ne garantit pas les horaires d'ouverture ni l'état effectif des lieux.</li>
+            <li><strong>Vérification préalable :</strong> L'utilisateur doit toujours vérifier les horaires via les canaux officiels de l'établissement ou Google Maps avant de se déplacer.</li>
+          </ul>
+
+          <h2>4. Contenu Utilisateur & Modération (DSA)</h2>
+          <p>
+            Tout contenu faux, injurieux ou diffamatoire est strictement prohibé. Tout contenu signalé est examiné et retiré sous <strong>24 heures</strong>.
+          </p>
+
+          <h2>5. Sécurité Routière</h2>
+          <div class="warning-box">
+            <p>
+              <strong>AVERTISSEMENT SÉCURITÉ ROUTIÈRE :</strong><br>
+              Il est strictement interdit de consulter ou d'utiliser Movidapp au volant. L'application ne doit être utilisée que par des passagers ou véhicule à l'arrêt.
+            </p>
+          </div>
+
+          <h2>6. Contact & Assistance</h2>
+          <p>Pour toute question :<br><span class="contact-badge">rantime.dev+movidapp@gmail.com</span></p>
+        `
+      },
+      de: {
+        title: "Nutzungsbedingungen",
+        lastUpdated: "Zuletzt aktualisiert: 20. Oktober 2026",
+        content: `
+          <h2>1. Vertragsvereinbarung</h2>
+          <p>
+            Diese Nutzungsbedingungen stellen eine rechtsverbindliche Vereinbarung zwischen Ihnen (<strong>„Nutzer“</strong>) und <strong>Movidapp</strong> (betrieben von <strong>Rantime</strong>) bezüglich der Nutzung der mobilen App Movidapp dar.
+          </p>
+
+          <h2>2. Altersvoraussetzung</h2>
+          <p>
+            Die Nutzung der App ist Personen ab <strong>16 Jahren</strong> gestattet (bzw. dem gesetzlichen Mindestalter für Nachtlokale im jeweiligen Land).
+          </p>
+
+          <h2>3. Zweck des Dienstes & Haftungsausschluss</h2>
+          <p>
+            Movidapp dient ausschließlich der statistischen Schätzung von Besucheraufkommen und Stimmung im Nachtleben. Öffnungszeiten werden nicht garantiert; eine eigenständige Überprüfung vor Reiseantritt ist erforderlich.
+          </p>
+
+          <h2>4. Verkehrssicherheit</h2>
+          <div class="warning-box">
+            <p>
+              <strong>WICHTIGER HINWEIS ZUR VERKEHRSSICHERHEIT:</strong><br>
+              Die Nutzung von Movidapp während des Führens eines Kraftfahrzeugs oder Fahrrads ist strengstens untersagt.
+            </p>
+          </div>
+
+          <h2>5. Kontakt</h2>
+          <p>Bei Rückfragen:<br><span class="contact-badge">rantime.dev+movidapp@gmail.com</span></p>
+        `
+      },
+      pt: {
+        title: "Termos de Serviço",
+        lastUpdated: "Última atualização: 20 de outubro de 2026",
+        content: `
+          <h2>1. Acordo Vinculativo</h2>
+          <p>
+            Estes Termos de Serviço constituem um acordo legalmente vinculativo entre você (<strong>"Utilizador"</strong>) e o <strong>Movidapp</strong> (desenvolvido por <strong>Rantime</strong>), relativo ao uso da aplicação móvel.
+          </p>
+
+          <h2>2. Requisitos de Idade</h2>
+          <p>
+            A Aplicação destina-se a pessoas com pelo menos <strong>16 anos</strong> de idade.
+          </p>
+
+          <h2>3. Finalidade e Isenção de Responsabilidade</h2>
+          <p>
+            O Movidapp destina-se unicamente a estimar e acompanhar a afluência em tempo real com base em relatórios da comunidade. Não garante horários de funcionamento nem estados de abertura.
+          </p>
+
+          <h2>4. Segurança Rodoviária</h2>
+          <div class="warning-box">
+            <p>
+              <strong>AVISO DE SEGURANÇA RODOVIÁRIA:</strong><br>
+              É expressamente proibido utilizar o Movidapp enquanto conduz qualquer veículo. A consulta deve ser feita apenas por passageiros ou com o veículo imobilizado.
+            </p>
+          </div>
+
+          <h2>5. Contacto</h2>
+          <p>Para dúvidas ou solicitações:<br><span class="contact-badge">rantime.dev+movidapp@gmail.com</span></p>
+        `
+      }
+    };
+
+    function setLang(lang) {
+      const data = translations[lang] || translations.it;
+      document.getElementById('title').innerText = data.title;
+      document.getElementById('lastUpdated').innerText = data.lastUpdated;
+      document.getElementById('content').innerHTML = data.content;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      try {
+        const url = new URL(window.location);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url);
+      } catch (e) {}
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const requestedLang = params.get('lang');
+    const browserLang = (navigator.language || navigator.userLanguage || '').substring(0, 2).toLowerCase();
+
+    if (requestedLang && translations[requestedLang]) {
+      setLang(requestedLang);
+    } else if (browserLang && translations[browserLang]) {
+      setLang(browserLang);
+    } else {
+      setLang('it');
+    }
+  </script>
+</body>
+</html>
